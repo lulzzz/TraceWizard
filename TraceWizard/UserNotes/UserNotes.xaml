@@ -1,0 +1,19 @@
+﻿<Window x:Class="TraceWizard.TwApp.UserNotes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Enter Notes"
+    WindowStyle="SingleBorderWindow"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterOwner"
+    ShowInTaskbar="false"
+        >
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Bottom">
+            <Button DockPanel.Dock="Right" x:Name="CancelButton" HorizontalAlignment="Right" Margin="0,6,6,6" Padding="3" Height="24" Width="72" IsCancel="true">Cancel</Button>
+            <Button DockPanel.Dock="Right" x:Name="OKButton" HorizontalAlignment="Right" Margin="3,6,6,6" Padding="3" Height="24"  Width="72" IsDefault="true" >OK</Button>
+        </DockPanel>
+        <TextBox Name="textBox" DockPanel.Dock="Right" Width="400" Margin="0,6,6,6" />
+        <Label Content="Notes: " DockPanel.Dock="Right" Margin="0,6,0,0" />
+    </DockPanel>
+</Window>

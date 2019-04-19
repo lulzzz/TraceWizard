@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.ZoomHelp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+    <StackPanel Orientation="Horizontal" >
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Zoom In Horizontally:" />
+                <Run Text="Double-Click" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Zoom Out Horizontally:" />
+                <Run Text="Shift+Double-Click" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Zoom In Vertically:" />
+                <Run Text="Ctrl+Double-Click" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Zoom Out Vertically:" />
+                <Run Text="Ctrl+Shift+Double-Click" FontStyle="Italic"/>
+        </TextBlock >
+    </StackPanel>
+</UserControl>

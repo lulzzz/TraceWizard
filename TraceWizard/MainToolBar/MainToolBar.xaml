@@ -1,0 +1,310 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.MainToolBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"
+    xmlns:properties="clr-namespace:TraceWizard.TwApp.Properties"
+    SnapsToDevicePixels="True"
+    Background="Transparent"
+>
+    <DockPanel LastChildFill="False">
+        <DockPanel.Resources>
+            <Style TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Margin" Value="2,0,0,0" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="Height" Value="16" />
+                <Setter Property="Width" Value="16" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="Stretch" Value="None" />
+            </Style>
+        </DockPanel.Resources>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" >
+            <Button x:Name="NewButton" ToolTip="New Trace (Ctrl+N)" Command="New" Style="{StaticResource ToolBarButtonStyle}" >
+                <StackPanel>
+                    <Image Source="../Images/tracenew.png" Style="{StaticResource ImageStyle}" />
+                    <TextBlock Text="New" />
+                </StackPanel>
+            </Button>
+            <Button ToolTip="Open Trace (Ctrl+O)" Command="Open" Style="{StaticResource ToolBarButtonStyle}" >
+                <StackPanel>
+                    <Image Source="../Images/traceopen.png" />
+                    <TextBlock Text="Open"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="OpenDropDownButton" Style="{StaticResource ToolBarDropDownButtonStyle}"
+                Height="{Binding ElementName=OpenButton, Path=ActualHeight}">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Open Trace"  Command="Open" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="../Images/traceopen.png" Style="{StaticResource ImageStyle}" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Compare Traces" Command="{x:Static local:MainTwWindow.CompareAnalysesCommand}" 
+                            InputGestureText="Ctrl+Alt+O" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="../Images/traces2.png" Style="{StaticResource ImageStyle}" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Recover Trace" Command="{x:Static local:MainTwWindow.OpenRecoverCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="../Images/tracerecover.png" Style="{StaticResource ImageStyle}" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+                <Image Source="../Images/arrowdown.png" HorizontalAlignment="Center"/>
+            </Button>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <Button ToolTip="Save Trace (Ctrl+S)" DockPanel.Dock="Left" Command="Save" Style="{StaticResource ToolBarButtonStyle}" >
+                <StackPanel>
+                    <Image Source="../Images/save.png" />
+                    <TextBlock Text="Save" />
+                </StackPanel>
+            </Button>
+            <Button ToolTip="Save Trace As (Ctrl+Alt+S)" DockPanel.Dock="Left" Command="{x:Static local:MainTwWindow.SaveAsCommand}"
+                 Style="{StaticResource ToolBarButtonStyle}" >
+                <StackPanel>
+                    <Image Source="../Images/saveas.png" />
+                    <TextBlock Text="Save As" />
+                </StackPanel>
+            </Button>
+            <Button ToolTip="Print (Ctrl+P)" DockPanel.Dock="Left" Command="Print" Style="{StaticResource ToolBarButtonStyle}" >
+                <StackPanel>
+                    <Image Source="../Images/print.png" />
+                    <TextBlock Text="Print" />
+                </StackPanel>
+            </Button>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <Button x:Name="FullScreenButton" ToolTip="Full Screen (F11)" Style="{StaticResource ToolBarButtonStyle}" 
+                Command="{x:Static local:MainTwWindow.EnterFullScreenCommand}">
+                <StackPanel>
+                    <Image Source="../Images/fullscreen.png" />
+                    <TextBlock Text="Full" />
+                </StackPanel>
+            </Button>
+            <Separator x:Name="SeparatorReports" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <Button x:Name="ButtonReports" Style="{StaticResource ToolBarButtonStyle}" >
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Daily and Hourly Report"
+                            ToolTip="For each selected trace, shows hourly water use by fixture."
+                            Command="{x:Static local:MainTwWindow.HourlyReportCommand}"
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\stats.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Summary Report" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\stats.png" />
+                            </MenuItem.Icon>
+                            <MenuItem Header="By Volume" 
+                                ToolTip="For each selected trace, shows the number of events by fixture." 
+                                Command="{x:Static local:MainTwWindow.FixtureSummaryByVolumeReportCommand}" 
+                                CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" />
+                            <MenuItem Header="By Events" 
+                                ToolTip="For each selected trace, shows the volume by fixture." 
+                                Command="{x:Static local:MainTwWindow.FixtureSummaryByEventsReportCommand}" 
+                                CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" />
+                            </MenuItem>
+                        <MenuItem Header="Distribution Report"
+                            ToolTip="For each selected trace, shows the distribution for each fixture."
+                            Command="{x:Static local:MainTwWindow.DistributionReportCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\stats.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                        <MenuItem Header="Project Report" 
+                            ToolTip="Displays and exports an Excel-compatible text file showing per-trace statistics for selected traces."
+                            Command="{x:Static local:MainTwWindow.ProjectReportCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\statsexcel.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Aggregate Report"
+                            ToolTip="Displays aggregate statistics across all selected traces."                                      
+                            Command="{x:Static local:MainTwWindow.AggregateReportCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\stats.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                        <MenuItem Header="Log Integrity Report" 
+                            ToolTip="Displays report on integrity of selected logs."
+                            Command="{x:Static local:MainTwWindow.VerifyLogReportCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\stats.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+                <StackPanel>
+                    <Image Source="../Images/stats.png" Style="{StaticResource ImageStyle}" />
+                    <TextBlock Text="Reports" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonTools" Style="{StaticResource ToolBarButtonStyle}" >
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Export Events Database"
+                            ToolTip="Exports a text file with all events from selected traces."
+                            Command="{x:Static local:MainTwWindow.EventsDatabaseReportCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\database.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                        <MenuItem Name="ConfusionMatrixMenu" Header="Confusion Matrix"  
+                            ToolTip="Evaluates machine learning algorithms on Trace Wizard data."
+                            Command="{x:Static local:MainTwWindow.ConfusionMatrixCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\confusionmatrix.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Export Weka" 
+                            ToolTip="Exports selected traces to Weka utility for evaluation of machine learning algorithms."                                      
+                            Command="{x:Static local:MainTwWindow.ExportToWekaCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\weka.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                        <MenuItem Header="Export Exemplars" 
+                            ToolTip="Exports selected traces for use by Nearest Neighbor classifier."                                      
+                            Command="{x:Static local:MainTwWindow.ExportToExemplarsCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\databases.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                        <MenuItem Header="Export mdb to csv" 
+                            ToolTip="Exports log files from Meter Master MDB format to Meter Master CSV format."
+                            Command="{x:Static local:MainTwWindow.ExportMdbToCsvCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\export.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Export tdb to twdb" 
+                            ToolTip="Exports traces from TW4 format (tdb) to TW5 format (twdb)."
+                            Command="{x:Static local:MainTwWindow.ExportTdbToTwdbCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\export.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Export log to twdb" 
+                            ToolTip="Exports log files (all formats) to TW5 format (twdb) without machine classification."
+                            Command="{x:Static local:MainTwWindow.ExportLogToTwdbCommand}"
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\export.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+                <StackPanel>
+                    <Image Source="../Images/hammer.png" />
+                    <TextBlock Text="Tools" />
+                </StackPanel>
+            </Button>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <Button x:Name="ButtonHelp" Style="{StaticResource ToolBarButtonStyle}" >
+                <Button.ContextMenu>
+                    <ContextMenu >
+                        <MenuItem x:Name="ReleaseNotesHelpMenu" Header="Release Notes" Command="{x:Static local:MainTwWindow.ReleaseNotesCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\page.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Knowledge Base">
+                            <MenuItem x:Name="ShortcutsHelpMenu" Header="Shortcuts Help" Command="{x:Static local:MainTwWindow.ShortcutsHelpCommand}"
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                                <MenuItem.Icon>
+                                    <Image Source="..\Images\page.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem x:Name="CommandsHelpMenu" Header="Commands Help" Command="{x:Static local:MainTwWindow.CommandsHelpCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                                <MenuItem.Icon>
+                                    <Image Source="..\Images\page.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem x:Name="CommandLineHelpMenu" Header="Command Line Help" Command="{x:Static local:MainTwWindow.CommandLineHelpCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                                <MenuItem.Icon>
+                                    <Image Source="..\Images\page.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem x:Name="InstallationNotesHelpMenu" Header="Installation Help" Command="{x:Static local:MainTwWindow.InstallationNotesCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                                <MenuItem.Icon>
+                                    <Image Source="..\Images\page.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                            <MenuItem Header="Working with Telematics Traces" Command="{x:Static local:MainTwWindow.TipsCommand}" 
+                                  CommandParameter="1"
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                                <MenuItem.Icon>
+                                    <Image Source="..\Images\pdf.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Navigating the Graph" Command="{x:Static local:MainTwWindow.TipsCommand}" 
+                                  CommandParameter="2"
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                                <MenuItem.Icon>
+                                    <Image Source="..\Images\pdf.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Finding and Selecting Events" Command="{x:Static local:MainTwWindow.TipsCommand}" 
+                                  CommandParameter="3"
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                                <MenuItem.Icon>
+                                    <Image Source="..\Images\pdf.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                        <MenuItem x:Name="PreferencesMenu" Header="Preferences..." Command="{x:Static local:MainTwWindow.PreferencesCommand}"
+                            InputGestureText="Shift+F4" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\settings.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem x:Name="AboutHelpMenu" Header="About" Command="{x:Static local:MainTwWindow.AboutCommand}" 
+                            CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" >
+                            <MenuItem.Icon>
+                                <Image Source="..\Images\TraceWizard.ico" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+                <StackPanel>
+                    <Image Source="../Images/help.png" />
+                    <TextBlock Text="Help"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

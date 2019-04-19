@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.PolygonHelp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+    <StackPanel Orientation="Horizontal" >
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Split Into Contiguous:" />
+                <Run Text="Alt+Click" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Split Into Simultaneous:" />
+                <Run Text="Ctrl+Alt+Click" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Merge:" />
+                <Run Text="Drag" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Merge All:" />
+                <Run Text="Ctrl+Drag" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Add to Selection:" />
+                <Run Text="Ctrl+Click" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Extend Selection:" />
+                <Run Text="Shift+Click" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Classify:" />
+                <Run Text="Click, Fixture Key" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Classify Similar:" />
+                <Run Text="Click, Shift+Fixture Key" FontStyle="Italic"/>
+        </TextBlock >
+    </StackPanel>
+</UserControl>

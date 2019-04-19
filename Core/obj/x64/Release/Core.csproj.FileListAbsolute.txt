@@ -1,0 +1,7 @@
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Core\bin\x64\Release\TraceWizard.CoreLibrary.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Core\bin\x64\Release\TraceWizard.CoreLibrary.pdb
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Core\bin\x64\Release\TraceWizard.Environment.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Core\bin\x64\Release\TraceWizard.Environment.pdb
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Core\obj\x64\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Core\obj\x64\Release\TraceWizard.CoreLibrary.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Core\obj\x64\Release\TraceWizard.CoreLibrary.pdb

@@ -1,0 +1,6 @@
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Environment\bin\x64\Release\TraceWizard.Environment.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Environment\bin\x64\Release\TraceWizard.Environment.pdb
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Environment\bin\x64\Release\WPFToolkit.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Environment\bin\x64\Release\WPFToolkit.pdb
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Environment\obj\x64\Release\TraceWizard.Environment.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Environment\obj\x64\Release\TraceWizard.Environment.pdb

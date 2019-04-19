@@ -1,0 +1,135 @@
+<html>
+<body>
+<head>
+<title>
+Trace Wizard Installation
+</title>
+<style type="text/css">
+body {
+width:800px;
+font-size:12px;
+font-family:Helvetica;
+}
+th, td {
+padding:10px;
+vertical-align:top;
+}
+td {
+text-align:left;
+width:50%;
+}
+th {
+text-align:right;
+font-weight:normal;
+font-style:italic;
+}
+table {
+margin-bottom:20px;
+width:100%;
+vertical-align:top;
+}
+h1, h2 {
+text-align:center;
+}
+h2 {
+border-bottom:dotted 1px;
+padding:10px;
+margin:10px;
+}
+.center {
+text-align:center;
+}
+</style>
+</head>
+<h1>Trace Wizard Installation</h1>
+
+<h2>System Requirements</h2>
+
+<h3>Supported Operating Systems</h3>
+
+<ul>
+<li>Windows XP Service Pack 2 or above
+</li><li>
+Windows Vista
+</li><li>
+Windows 7
+</li>
+</ul>
+
+<h3>Hardware Requirements</h3>
+
+<ul>
+<li>Architecture: x86 or x64
+</li><li>
+Minimum: Undetermined
+</li><li>
+Recommended: 2.1 GHz or higher CPU, 4.00 GB RAM, 1280x800 display or above
+</li>
+</ul>
+
+<h3>Software Requirements</h3>
+
+<ul>
+<li><a href="http://www.microsoft.com/download/en/confirmation.aspx?id=22">.NET Framework, version 3.5 SP1</a>
+</li><li>
+<a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23734">Office 2007 System Driver</a> (not the Access 2007 Runtime; required for MDB log format; optional if using other log formats)
+</li><li style="display:none">
+A Speech Recognition Engine (optional)
+</li>
+</ul>
+
+<h3>Web Services</h3>
+
+<p>
+Internet access is required for online help and version checking and updating (optional)
+</p>
+
+<h2>Installation Troubleshooting</h2>
+
+<ul>
+<li>
+To install Trace Wizard, simply download and unzip the application to a folder of your local drive. There is no separate installation program.
+</li><li>
+If Trace Wizard will not come up at all, please review System Requirements above. The .NET Framework might not be installed.
+</li><li>
+If Trace Wizard will not load MDB or TDB files, please review System Requirements above. The Office 2007 System Driver might not be installed. If you have installed Access 2010 (or Office 2010) or later, please reinstall the Office 2007 System Driver.
+</li>
+</ul>
+
+<h3>.NET Framework</h3>
+
+<p>
+To install the .NET Framework, administrative access to your computer may be required. This software is pre-installed on some systems. To confirm whether this software is already installed, use a registry viewer (such as regedt32.exe) and confirm the existence of an entry HKLM\Software\Microsoft\NET Framework Setup\NDP\v3.5\Install. Verify that the value name Install has value data = 1; and that the value name SP has value data = 1.
+</p>
+
+<h3>Office 2007 System Driver</h3>
+
+<p>
+To install the Office 2007 System Driver, administrative access to your computer may be required. This software is pre-installed on some systems. To confirm whether this software is already installed, use a registry viewer (such as regedt32.exe) and confirm the existence of a registry entry HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Microsoft.Jet.OLEDB.4.0 and subkey CLSID with value Default = {dee35070-506b-11cf-b1aa-00aa00b8de95}. Note: It is not necessary to have Microsoft Office 2007 installed, only this driver. This is not the driver version installed by Trace Wizard version 4.
+</p>
+
+<div style="display:none">
+<h3>Speech Recognition</h3>
+
+<p>
+To enable speech recognition in Trace Wizard (for classifying selected events):
+</p>
+
+<ul>
+<li>A microphone is required, preferably a headset one.
+</li><li>
+Edit the *.config file in the TW directory. Set IsSpeechRecognitionEnabled value to True. Restart Trace Wizard.
+</li><li>
+If a speech recognition engine is not already installed, Windows may try to install one when Trace Wizard first needs it.
+</li><li>
+Speech Recognition is built into Windows Vista and Windows 7. See Control Panel (Speech Recognition).
+</li><li>
+It is recommended that users 'train' the speech recognition engine to their voice and environment. See Control Panel.
+</li><li>
+<a href="http://support.microsoft.com/kb/306537">How to Use Speech Recognition on Windows XP</a>
+</li>
+</ul>
+</div>
+
+</body>
+</html>

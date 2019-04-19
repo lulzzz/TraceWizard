@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.FixtureSummaryReportPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp" 
+    Margin="20" HorizontalAlignment="Left" VerticalAlignment="Top"
+>
+    <DockPanel>
+        <local:PieChart DockPanel.Dock="Left" x:Name="PieChart" Margin="0,0,20,0" />
+        <local:FixtureSummaryReportTable DockPanel.Dock="Right" x:Name="FixtureSummaryReportTable" VerticalAlignment="Center" Margin="20,0,0,0"/>
+    </DockPanel>
+</UserControl>

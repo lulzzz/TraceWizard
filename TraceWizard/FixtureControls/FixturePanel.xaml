@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.FixturePanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"
+Margin="1,0"
+    >
+    <StackPanel>
+        <local:ShortFixtureLabel x:Name="FixtureLabel"/>
+        <local:FixtureSummaryPanel x:Name="FixtureSummaryPanel"/>
+    </StackPanel>
+</UserControl>
+

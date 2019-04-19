@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<iasettings>
+  <projectproperties>
+    <manufacturer>Aquacraft</manufacturer>
+    <productname>TraceWizard</productname>
+    <productversion>5.3</productversion>
+    <productcode>{e5614566-ffee-4854-9cfb-cb54800e56b9}</productcode>
+    <upgradecode>{83f539d7-d9b6-4b92-9b3c-be0389c566e3}</upgradecode>
+    <language>0</language>
+    <languagename>English</languagename>
+  </projectproperties>
+  <summary>
+    <title>TraceWizard</title>
+    <subject>TraceWizard</subject>
+    <author>User</author>
+    <summarycomments>TraceWizard</summarycomments>
+    <revisioncode>{e76e719b-0956-4aa0-972e-862b30fef0cc}</revisioncode>
+    <uacelevation>highestAvailable</uacelevation>
+  </summary>
+  <addremove>
+    <publishername>Aquacraft</publishername>
+    <contactname>Aquacraft</contactname>
+    <helplink>http://www.aquacraft.com</helplink>
+    <productupdatelink>http://www.aquacraft.com</productupdatelink>
+    <addremovecomments>All Rights Reserved - Aquacraft 2019</addremovecomments>
+    <iconfile />
+  </addremove>
+  <codegen>
+    <generateincludefiles>1</generateincludefiles>
+    <generatefeatures>1</generatefeatures>
+    <refreshscript>0</refreshscript>
+  </codegen>
+  <compilervariables>
+    <variables />
+  </compilervariables>
+  <build>
+    <buildtype>1</buildtype>
+    <buildasmsi>True</buildasmsi>
+    <cachesources>1</cachesources>
+  </build>
+  <targetfolders />
+  <files>
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\source\Core\..\..\bin\TraceWizard.CoreLibrary\Debug\TraceWizard.CoreLibrary.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\source\Disaggregators\..\..\bin\TraceWizard.Disaggregation.Disaggregators\Debug\TraceWizard.Disaggregation.Disaggregators.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\source\TraceWizard\..\..\bin\TraceWizard\Debug\TraceWizard.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="1" installfilecommand="0" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\source\Environment\..\..\bin\TraceWizard.Environment\Debug\TraceWizard.Environment.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\Ionic.Zip.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\Ionic.Zip.xml" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\License.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\single.license" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\TraceWizard.exe.config" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\TraceWizardProKey.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\twCommandLineHelp.html" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\twCommandsHelp.html" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\twReadMe.html" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\twShortcutsHelp.html" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\TwTips1.pdf" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\TwTips2.pdf" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\TwTips3.pdf" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\WPFToolkit.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+    <filedetails filename="C:\temp\aquacraft\TraceWizard53\bin\TraceWizard\Release\WPFToolkit.pdb" targetlocation="$TARGETDIR$" type="0" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="1" />
+  </files>
+  <dependencies />
+  <registry />
+  <dialogtheme>
+    <themename>Official</themename>
+  </dialogtheme>
+  <authenticode>
+    <sign>0</sign>
+    <mode>0</mode>
+    <certificatefile />
+    <keyfile />
+    <pfxfile />
+    <productinfourl />
+    <authpassword />
+    <timestampurl />
+    <signall>0</signall>
+  </authenticode>
+  <compression>
+    <compressiontype>8</compressiontype>
+    <encrypt>0</encrypt>
+    <compressionpassword />
+  </compression>
+  <output>
+    <outputtype>1</outputtype>
+    <location>c:\temp\aquacraft\53installer</location>
+    <filename />
+    <calculatefilehash>0</calculatefilehash>
+    <refreshrevisioncode>1</refreshrevisioncode>
+  </output>
+</iasettings>

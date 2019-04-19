@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.VerticalRuler"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+>
+    <Border BorderThickness="0,0,1,0" BorderBrush="DarkGray">
+        <ScrollViewer Name="ScrollViewer" VerticalScrollBarVisibility="Hidden"
+              HorizontalScrollBarVisibility="Hidden"
+              VerticalAlignment="Stretch">
+            <Canvas Name="Canvas" Width="30" />
+        </ScrollViewer>
+    </Border>
+</UserControl>

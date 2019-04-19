@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.AnalysisPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"
+    Background="{Binding Source={StaticResource Settings}, Path=Default.AnalysisPanelBackgroundColor, Mode=OneWay}"
+    >
+    <UserControl.InputBindings>
+        <KeyBinding Modifiers="Ctrl" Key="A" Command="{x:Static local:AnalysisPanel.SelectAllCommand}" />
+        <KeyBinding Modifiers="Ctrl" Key="Z" Command="{x:Static local:AnalysisPanel.UndoCommand}" />
+        <KeyBinding Modifiers="Alt+Shift" Key="Backspace" Command="{x:Static local:AnalysisPanel.RedoCommand}" />
+        <KeyBinding Key="F7" Command="{x:Static local:AnalysisPanel.IncreaseZoomCenterCommand}" />
+        <KeyBinding Key="F8" Command="{x:Static local:AnalysisPanel.DecreaseZoomCenterCommand}" />
+        <KeyBinding Key="F9" Command="{x:Static local:AnalysisPanel.IncreaseVerticalZoomCenterCommand}" />
+        <KeyBinding Key="F10" Command="{x:Static local:AnalysisPanel.DecreaseVerticalZoomCenterCommand}" />
+    </UserControl.InputBindings>
+    <DockPanel Name="dockPanel" HorizontalAlignment="Stretch" Margin="4" LastChildFill="True" >
+        <local:TwStatusBar x:Name="StatusBar" DockPanel.Dock="Bottom" Margin="30,0"/>
+        <DockPanel Name="dockCommandPanel" DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" LastChildFill="True" Margin="30,0">
+            <local:CommandPanel DockPanel.Dock="Left" x:Name="CommandPanel" />
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom" Name="dockSummaryPanel" HorizontalAlignment="Left" LastChildFill="False" Margin="30,4">
+            <local:FixtureProfilesEditor DockPanel.Dock="Left" x:Name="FixtureProfilesEditor" />
+            <Separator Name="SeparatorFixtureProfilesEditor" DockPanel.Dock="Left" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <DockPanel Name="dockEventPanelsHorizontal" DockPanel.Dock="Left" LastChildFill="False" >
+                <local:EventPanel DockPanel.Dock="Left" x:Name="SelectedEventPanel" />
+                <Separator Name="SeparatorSelectedEventPanel" DockPanel.Dock="Left" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <local:EventPanel DockPanel.Dock="Left" x:Name="CurrentEventPanel" />
+                <Separator Name="SeparatorCurrentEventPanel" DockPanel.Dock="Left" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            </DockPanel>
+            <local:FixturesPanel DockPanel.Dock="Left" x:Name="FixturesPanel" HorizontalAlignment="Left" />
+            <Separator Name="SeparatorLogPanel" DockPanel.Dock="Left" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <local:LogPropertiesPanel DockPanel.Dock="Left" x:Name="LogPropertiesPanel" />
+            <Separator Name="SeparatorPieChartsPanel" DockPanel.Dock="Left" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <local:PieChartsPanel DockPanel.Dock="Left" x:Name="PieChartsPanel" />
+            <Separator Name="SeparatorReportsPanel" DockPanel.Dock="Left" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <local:QuickReportsPanel x:Name="ReportsPanel" DockPanel.Dock="Left" />
+        </DockPanel>
+        <Separator DockPanel.Dock="Bottom" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Margin="30,0"/>
+        <DockPanel Name="dockGraphToolBar" DockPanel.Dock="Bottom" HorizontalAlignment="Left" LastChildFill="False" Margin="30,4">
+            <local:GraphToolBar x:Name="GraphToolBar" DockPanel.Dock="Left" HorizontalAlignment="Left" />
+        </DockPanel>
+        <Border Style="{StaticResource GroupBoxBorderStyle}">
+        <DockPanel>
+            <DockPanel Name="dockEventPanelsVertical" LastChildFill="False" HorizontalAlignment="Left" Width="150">
+                <local:EventPanel DockPanel.Dock="Top" x:Name="SelectedEventPanelVertical" />
+                <Separator DockPanel.Dock="Top" Name="SeparatorSelectedEventPanelVertical" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <local:EventPanel DockPanel.Dock="Top" x:Name="CurrentEventPanelVertical" />
+            </DockPanel>
+            <local:StyledEventsViewer x:Name="StyledEventsViewer" />
+        </DockPanel>
+        </Border>
+    </DockPanel>
+</UserControl>

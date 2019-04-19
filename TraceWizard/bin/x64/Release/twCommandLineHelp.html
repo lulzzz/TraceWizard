@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Trace Wizard Command Line Help</title>
+<style type="text/css">
+body {
+width:800px;
+font-size:12px;
+font-family:Helvetica;
+}
+th, td {
+padding:10px;
+vertical-align:top;
+}
+td {
+text-align:left;
+width:50%;
+}
+th {
+text-align:right;
+font-weight:normal;
+font-style:italic;
+}
+table {
+margin-bottom:20px;
+width:100%;
+vertical-align:top;
+}
+h1, h2 {
+text-align:center;
+}
+h2 {
+border-bottom:dotted 1px;
+padding:10px;
+margin:10px;
+}
+.center {
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+<h1>Trace Wizard Command Line Help</h1>
+
+<p class="center">You can run Trace Wizard from the Windows Command Line in order to automate certain functions.</p>
+<p class="center">Standard wildcard characters * and ? are supported.</p>
+
+<h2 id="examples">Examples</h2>
+
+<table>
+<tr>
+<td>
+<strong>&gt; c:/MyPrograms/TraceWizard.exe c:/MyData/mylog.mdb c:/MyData/mytrace.twdb</strong>
+<br />
+Opens log mylog.mdb and trace mytrace.twdb in Trace Wizard.
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>&gt; c:/MyPrograms/TraceWizard.exe c:/MyData/*.csv</strong>
+<br />
+Opens log files with <i>csv</i> file extension in Trace Wizard.
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>&gt; c:/MyPrograms/TraceWizard.exe /mdbtocsv c:/MyData/*.mdb</strong>
+<br />
+Exports log files with <i>mdb</i> file extension to log files in <i>csv</i> log format. For example, for the log file mylog.mdb, the log file mylog.csv will be generated (and overwritten if previously existing). Runs unattended, can be script-driven. 
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>&gt; c:/MyPrograms/TraceWizard.exe /tdbtotwdb c:/MyData/*.tdb</strong>
+<br />
+Exports TW4 traces with <i>tdb</i> file extension to TW5 traces in <i>twdb</i> trace format. For example, for the TW4 trace file mytrace.tdb, the TW5 trace file mytrace.twdb will be generated (and overwritten if previously existing). Runs unattended, can be script-driven. 
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>&gt; c:/MyPrograms/TraceWizard.exe /logtotwdb c:/MyData/mylog.mdb c:/MyData/mylog2.csv</strong>
+<br />
+Exports log files to TW5 traces without machine classification. For example, for the log files mylog.mdb and mylog2.csv, the TW5 trace files mylog.twdb and mylog2.twdb will be generated (and overwritten if previously existing). Runs unattended, can be script-driven. 
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>

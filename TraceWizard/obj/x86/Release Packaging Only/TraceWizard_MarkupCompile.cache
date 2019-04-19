@@ -1,0 +1,20 @@
+﻿TraceWizard
+
+
+winexe
+C#
+.cs
+C:\Users\Bill\Source\Repos\TraceWizard5\source\TraceWizard\obj\x86\Release Packaging Only\
+TraceWizard.TwApp
+none
+false
+
+C:\Users\Bill\Source\Repos\TraceWizard5\source\TraceWizard\App.xaml
+69-250888982
+8414559560
+98789616294
+211658519185
+About\About.xaml;AnalysisPanel\AnalysisPanel.xaml;AnalysisPanel\CompareAnalysesPanel.xaml;ApprovalRuler\ApprovalRuler.xaml;ApprovalRuler\ApprovalTick.xaml;ClassificationRuler\ClassificationRuler.xaml;ClassificationRuler\ClassificationTick.xaml;DateTimePicker\DateTimePickerWindow.xaml;FixtureControls\FixtureButton.xaml;FixtureProfilesEditor\FixtureProfileRow.xaml;FixturesRuler\FixturesRuler.xaml;FixturesRuler\FixtureTick.xaml;FixtureSummaryReport\FixtureSummaryReportPanel.xaml;ConversionFactor\ConversionFactorWindow.xaml;GraphToolBar\GraphToolBar.xaml;HourlyReport\DailyTotalsDetail.xaml;MainToolBar\MainToolBar.xaml;PieChart\PieChartsPanel.xaml;SelectionRuler\SelectionTick.xaml;StatusBar\CommandHelp.xaml;StatusBar\PolygonHelp.xaml;StatusBar\ZoomHelp.xaml;VerifyLogReport\VerifyLogReportDetail.xaml;VerifyLogReport\VerifyLogReportPanel.xaml;VerifyLogReport\VerifyLogReportWindow.xaml;WekaExporter\ArffSelector.xaml;Commands\CommandPanel.xaml;ConfusionMatrix\SelectClassifier.xaml;DistributionReport\DistributionReportPanel.xaml;EventPanel\EventPanel.xaml;EventPolygon\EventPolygon.xaml;EventPolygon\EventPolygonMenu.xaml;EventProperties\EventProperties.xaml;EventsCanvas\EventsCanvas.xaml;EventsViewer\EventsViewer.xaml;EventsViewer\StyledEventsViewer.xaml;FixtureControls\HorizontalFixtureLabel.xaml;HourlyReport\HourlyReportWindow.xaml;HourlyReport\HourlyReportPanel.xaml;HourlyReport\HourlyTotalsDetail.xaml;HourlyReport\ReportGeneralProperties.xaml;LogPropertiesPanel\LogPropertiesPanel.xaml;FixtureControls\ShortFixtureLabel.xaml;FixtureControls\FixturePanel.xaml;FixtureControls\FixtureSummaryPanel.xaml;LogPropertiesPanel\LogPropertiesWindow.xaml;FixtureSummaryReport\FixtureSummaryReportWindow.xaml;Preferences\Preferences.xaml;QuickReportsPanel\ReportsPanel.xaml;DistributionReport\DistributionReportWindow.xaml;FixtureSummaryReport\FixtureSummaryReport.xaml;FixtureSummaryReport\FixtureSummaryReportRow.xaml;HorizontalRuler\HorizontalRuler.xaml;VerticalRuler\VerticalRuler.xaml;FixtureProfilesEditor\FixtureClassSelector.xaml;FixtureProfilesEditor\FixtureProfilesEditor.xaml;FixtureControls\FixturesPanel.xaml;FixtureProfilesPanel\FixtureProfilesPanel.xaml;MainWindow\MainWindow.xaml;PieChart\PieChart.xaml;PieChart\PieChartToolTip.xaml;StatusBar\TwStatusBar.xaml;Themes\TwDictionary.xaml;Progress\ProgressWindow.xaml;ProjectReport\ProjectReportSelector.xaml;Themes\generic.xaml;UserNotes\UserNotes.xaml;SelectionRuler\SelectionRuler.xaml;TimeFramePanel\TimeFramePanel.xaml;
+
+True
+

@@ -1,0 +1,222 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.GraphToolBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+     xmlns:local="clr-namespace:TraceWizard.TwApp"
+    xmlns:properties="clr-namespace:TraceWizard.TwApp.Properties"
+    SnapsToDevicePixels="True"
+>
+    <DockPanel Name="ToolBar" Margin="0" LastChildFill="False">
+        <DockPanel.Resources>
+            <Style TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Margin" Value="2,0,0,0" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="Height" Value="16" />
+                <Setter Property="Width" Value="16" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="Stretch" Value="None" />
+            </Style>
+        </DockPanel.Resources>
+        <StackPanel Name="panelTools" Margin="0,2">
+            <StackPanel Name="dockMachineClassify" Margin="2,0,2,0">
+                <Button Name="ButtonClassifyFirstCyclesUsingMachineLearning"  ToolTip="Classify 1st Cycles of Selected Events Using Machine Learning (Ctrl+Alt+F5)" Command="{x:Static local:AnalysisPanel.MachineClassifyFirstCyclesCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Image Source="../Images/classify1st.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button Name="ButtonClassifyUsingMachineLearning" ToolTip="Classify Selected Events Using Machine Learning (F5)" Command="{x:Static local:AnalysisPanel.ClassifyUsingMachineLearningCommand}" Style="{StaticResource ToolBarButtonStyle}" 
+                        Padding="4,0">
+                    <StackPanel>
+                        <Image Source="../Images/classify.png" Style="{StaticResource ImageStyle}" />
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Classify" Padding="4,0" Margin="0" HorizontalAlignment="Center"/>
+                            <TextBlock FontSize="10" Text="by machine" Padding="4,0" Margin="0" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <Button Name="ButtonClassifyUsingFixtureList" ToolTip="Classify Selected Events Using Fixture List (F6)" Command="{x:Static local:AnalysisPanel.ClassifyUsingFixtureListCommand}" Style="{StaticResource ToolBarButtonStyle}" 
+                        Padding="4,0">
+                    <StackPanel>
+                        <Image Source="../Images/filter.png" Style="{StaticResource ImageStyle}" />
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Classify" Padding="4,0" Margin="0" HorizontalAlignment="Center"/>
+                            <TextBlock FontSize="10" Text="by list" Padding="4,0" Margin="0" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <Button ToolTip="Select All (Ctrl+A)" Style="{StaticResource ToolBarButtonStyle}" Command="{x:Static local:AnalysisPanel.SelectAllCommand}" >
+                    <Image Source="../Images/selectall.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <StackPanel Name="dockClassificationActionMode" Margin="2,0,2,0">
+                    <ToggleButton Name="ButtonClassificationActionModeSelected" ToolTip="Classification Action Mode: Selected" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                        <Image Source="../Images/classificationactionmodeselected.png" Style="{StaticResource ImageStyle}" />
+                    </ToggleButton>
+                    <ToggleButton Name="ButtonClassificationActionModeAll" ToolTip="Classification Action Mode: All" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                        <Image Source="../Images/classificationactionmodeall.png" Style="{StaticResource ImageStyle}" />
+                    </ToggleButton>
+                    <ToggleButton Name="ButtonClassificationActionModeForward" ToolTip="Classification Action Mode: Forward" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                        <Image Source="../Images/classificationactionmodeforward.png" Style="{StaticResource ImageStyle}" />
+                    </ToggleButton>
+                </StackPanel>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <Button Name="ButtonApprove" ToolTip="Approve Selected Events (F12)" Command="{x:Static local:AnalysisPanel.ApproveCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/approve.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button Name="ButtonApproveAllPrevious" ToolTip="Approve All Previous Events (Ctrl+F12)" Command="{x:Static local:AnalysisPanel.ApproveAllPreviousCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/approveallprevious.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button Name="ButtonApproveInView" ToolTip="Approve Events In View (Alt+F12)" Command="{x:Static local:AnalysisPanel.ApproveInViewCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/approveinview.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <Button ToolTip="Add Selected Events To Fixture List (2)" Command="{x:Static local:AnalysisPanel.AddFixtureCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/addfixture.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button ToolTip="Incorporate Selected Events Into Fixture List (3)" Command="{x:Static local:AnalysisPanel.ApplyFixtureCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/applyfixture.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <StackPanel Name="dockManualClassificationMode" Margin="2,0,2,0">
+                    <ToggleButton Name="ButtonManualClassificationModeWithoutAdoption" ToolTip="Manual Classification Mode: Without Similar" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                        <Image Source="../Images/manualclassificationmodewithoutadoption.png" Style="{StaticResource ImageStyle}" />
+                    </ToggleButton>
+                    <ToggleButton Name="ButtonManualClassificationModeWithAdoption" ToolTip="Manual Classification Mode: With Similar" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                        <Image Source="../Images/manualclassificationmodewithadoption.png" Style="{StaticResource ImageStyle}" />
+                    </ToggleButton>
+                </StackPanel>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                <Button ToolTip="Change Start Time of Trace (Ctrl+T)" Command="{x:Static local:MainTwWindow.ChangeStartTimeCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Image Source="../Images/clock.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button ToolTip="Apply Conversion Factor (Ctrl+Shift+A)" Name="ButtonApplyConversionFactor" Command="{x:Static local:MainTwWindow.ApplyConversionFactorCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Image Source="../Images/function.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button Name="ButtonRefresh" Command="{x:Static local:AnalysisPanel.RefreshCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Button.ToolTip>
+                        <TextBlock>Refreshes Similar Counts (Ctrl+F5)<LineBreak />(Recommended before executing Similar command)</TextBlock>
+                    </Button.ToolTip>
+                    <Image Source="../Images/refresh.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+            </StackPanel>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockSplitMerge" Margin="2,0,2,0">
+                <ToggleButton  Name="ButtonSplitHorizontally" ToolTip="Split Contiguously (Alt+Click)" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/splithorizontal.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+                <ToggleButton  Name="ButtonSplitVertically" ToolTip="Split Simultaneously (Ctrl+Alt+Click)" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/splitvertical.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+                <ToggleButton  Name="ButtonMergeAllIntoBase" ToolTip="Merge All Simultaneously or Contiguously (Ctrl+Drag)" Style="{StaticResource ToolBarToggleButtonStyle}">
+                    <Image Source="../Images/mergeverticalallintobase.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+            </StackPanel>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockUndo" Margin="2,0,2,0">
+                <Button x:Name="ButtonUndo" ToolTip="Undo (Ctrl+Z)" Command="{x:Static local:AnalysisPanel.UndoCommand}" Style="{StaticResource ToolBarButtonStyle}" 
+                    ToolTipService.ShowOnDisabled="False" >
+                    <Image Source="../Images/undo.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button x:Name="ButtonRedo" ToolTip="Redo (Alt+Shift+Backspace)" Command="{x:Static local:AnalysisPanel.RedoCommand}" Style="{StaticResource ToolBarButtonStyle}" 
+                    ToolTipService.ShowOnDisabled="False" >
+                    <Image Source="../Images/redo.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+            </StackPanel>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockZoom" Margin="2,0,2,0">
+                <Button ToolTip="Zoom In Horizontally (F7)" Command="{x:Static local:AnalysisPanel.IncreaseZoomCenterCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Image Source="../Images/zoominhorizontal.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button ToolTip="Zoom Out Horizontally  (F8)" Command="{x:Static local:AnalysisPanel.DecreaseZoomCenterCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Image Source="../Images/zoomouthorizontal.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button ToolTip="Zoom In Vertically (F9)" Command="{x:Static local:AnalysisPanel.IncreaseVerticalZoomCenterCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Image Source="../Images/zoominvertical.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button ToolTip="Zoom Out Vertically (F10)" Command="{x:Static local:AnalysisPanel.DecreaseVerticalZoomCenterCommand}" Style="{StaticResource ToolBarButtonStyle}">
+                    <Image Source="../Images/zoomoutvertical.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+            </StackPanel>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockBookmark" Margin="2,0,2,0">
+                <Button ToolTip="Set Bookmark (F1)" Command="{x:Static local:AnalysisPanel.SetBookmarkCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/bookmarkset.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button ToolTip="Go to Bookmark (F2)" Command="{x:Static local:AnalysisPanel.GoToBookmarkCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/bookmarkgoto.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+            </StackPanel>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockBringIntoView" Margin="2,0,2,0">
+                <Button ToolTip="Bring Previous Selected Event Into View (F3)" Command="{x:Static local:AnalysisPanel.BringPreviousSelectedEventIntoViewCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/previousselected.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+                <Button ToolTip="Bring Next Selected Event Into View (F4)" Command="{x:Static local:AnalysisPanel.BringNextSelectedEventIntoViewCommand}" Style="{StaticResource ToolBarButtonStyle}" >
+                    <Image Source="../Images/nextselected.png" Style="{StaticResource ImageStyle}" />
+                </Button>
+            </StackPanel>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockFind" Margin="2,0,2,0">
+                <RepeatButton ToolTip="Find Previous" Command="{x:Static local:AnalysisPanel.FindPreviousCommand}" Style="{StaticResource ToolBarRepeatButtonStyle}">
+                    <Image Source="../Images/findprevious.png" Style="{StaticResource ImageStyle}" />
+                </RepeatButton>
+                <RepeatButton ToolTip="Find Next" Command="{x:Static local:AnalysisPanel.FindNextCommand}" Style="{StaticResource ToolBarRepeatButtonStyle}">
+                    <Image Source="../Images/findnext.png" Style="{StaticResource ImageStyle}" />
+                </RepeatButton>
+            </StackPanel>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockFindMode" Margin="2,0,2,0">
+                <ToggleButton Name="ButtonFindModeAny" ToolTip="Find Mode: Any Fixture" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/findmodeany.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+                <ToggleButton Name="ButtonFindModeSelected" ToolTip="Find Mode: Selected Fixture" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/findmodeselected.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+                <ToggleButton Name="ButtonFindModeSimilar" ToolTip="Find Mode: Similar Fixture" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/findmodesimilar.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+            </StackPanel>
+            <Separator Name="SeparatorRulers" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="dockRulers" Margin="2,0,2,0">
+                <ToggleButton Name="ButtonSelectionRuler" ToolTip="Show/Hide Selection Ruler" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/selectionruler.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+                <ToggleButton Name="ButtonClassificationRuler" ToolTip="Show/Hide Classification Ruler" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/classificationruler.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+                <ToggleButton Name="ButtonApprovalRuler" ToolTip="Show/Hide Approval Ruler" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/approvalruler.png" Style="{StaticResource ImageStyle}" />
+                </ToggleButton>
+                <ToggleButton Name="ButtonFixturesRuler" Style="{StaticResource ToolBarToggleButtonStyle}" >
+                    <Image Source="../Images/fixturesruler.png" Style="{StaticResource ImageStyle}" />
+                    <ToggleButton.ToolTip>
+                        <TextBlock>Show/Hide Fixtures Ruler<LineBreak />(available for short views only)</TextBlock>
+                    </ToggleButton.ToolTip>
+                </ToggleButton>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="panelFixtures" Margin="0,2" >
+            <Separator Name="separatorPanelFixtures" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <StackPanel Name="panelFixturesHighFrequency" Margin="2,0,2,0" />
+            <!--Separator Name="separatorPanelFixturesLowFrequency" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" /-->
+            <StackPanel Name="panelFixturesLowFrequency" Margin="2,0,2,0" />
+            <Button Name="ButtonMoreFixtures" Style="{StaticResource ToolBarDropDownButtonStyle}" Margin="0,0,2,0" 
+                Height="{Binding ElementName=OpenButton, Path=ActualHeight}" ToolTip="Show More Fixtures">
+                <Image Name="ImageMoreFixtures" Source="../Images/arrowright.png" HorizontalAlignment="Center" />
+            </Button>
+            <!--Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" /-->
+            <StackPanel Name="panelFirstCycle" Margin="2,0,2,0">
+                <local:FixtureButton x:Name="ButtonUserClassifyFirstCycles" ToolTip="Classify/Unclassify as 1st Cycle (1)" Command="{x:Static local:AnalysisPanel.ManuallyClassifyFirstCyclesCommand}" Style="{StaticResource ToolBarButtonStyle}" Background="White" >
+                    <Image Source="../Images/user1st.png" Style="{StaticResource ImageStyle}" />
+                </local:FixtureButton>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

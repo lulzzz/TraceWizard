@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.FixturesPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"
+    >
+    <Border Style="{StaticResource GroupBoxBorderStyle}">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <local:FixturePanel x:Name="FixturePanelLabels" VerticalAlignment="Top" Padding="0,0,4,0" HorizontalAlignment="Left"/>
+            <Grid Name="grid" HorizontalAlignment="Left" />
+            <local:FixturePanel x:Name="FixturePanelTotal" VerticalAlignment="Top" Padding="0,0,4,0" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Border>
+</UserControl>

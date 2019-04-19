@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.EventsViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"        
+>
+    <ScrollViewer Name="ScrollViewer" IsTabStop="True" Focusable="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"
+        HorizontalAlignment="Stretch" Background="{Binding Source={StaticResource Settings}, Path=Default.GraphBackgroundColor, Mode=OneWay}" >
+        <local:LinedEventsCanvas x:Name="LinedEventsCanvas" />
+    </ScrollViewer>
+    <UserControl.ContextMenu>
+        <ContextMenu Name="MenuContext">
+            <MenuItem x:Name="MenuZoomHorizontally" Header="Zoom Horizontally" >
+                <MenuItem x:Name="MenuZoomHorizontallyTenMinutes" Header="10 minutes" />
+                <MenuItem x:Name="MenuZoomHorizontallyTwentyMinutes" Header="20 minutes" />
+                <MenuItem x:Name="MenuZoomHorizontallyTwoHours" Header="2 hours" />
+                <MenuItem x:Name="MenuZoomHorizontallySixHours" Header="6 hours" />
+                <MenuItem x:Name="MenuZoomHorizontallyOneDay" Header="1 day" />
+                <MenuItem x:Name="MenuZoomHorizontallySevenDays" Header="7 days" />
+                <MenuItem x:Name="MenuZoomHorizontallyAllTheWayOut" Header="All The Way Out" />
+            </MenuItem>
+            <MenuItem x:Name="MenuZoomInHorizontally" Header="Zoom In Horizontally" FontWeight="Bold" />
+            <MenuItem x:Name="MenuZoomOutHorizontally" Header="Zoom Out Horizontally" />
+            <Separator />
+            <MenuItem x:Name="MenuZoomVertically" Header="Zoom Vertically" >
+                <MenuItem x:Name="MenuZoomVerticallyOneVolumeUnit" Header="1 gallon per minute" />
+                <MenuItem x:Name="MenuZoomVerticallyTwoVolumeUnits" Header="2 gallons per minute" />
+                <MenuItem x:Name="MenuZoomVerticallyFiveVolumeUnits" Header="5 gallons per minute" />
+                <MenuItem x:Name="MenuZoomVerticallyTenVolumeUnits" Header="10 gallons per minute" />
+                <MenuItem x:Name="MenuZoomVerticallyTwentyVolumeUnits" Header="20 gallons per minute" />
+                <MenuItem x:Name="MenuZoomVerticallyAllTheWayOut" Header="All The Way Out" />
+            </MenuItem>
+            <MenuItem x:Name="MenuZoomInVertically" Header="Zoom In Vertically" />
+            <MenuItem x:Name="MenuZoomOutVertically" Header="Zoom Out Vertically" />
+        </ContextMenu>
+    </UserControl.ContextMenu>
+</UserControl>

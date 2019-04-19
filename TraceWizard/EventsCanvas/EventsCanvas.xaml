@@ -1,0 +1,7 @@
+﻿<local:ScrollableCanvas x:Class="TraceWizard.TwApp.EventsCanvas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"        
+    xmlns:properties="clr-namespace:TraceWizard.TwApp.Properties"
+    Background="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ScrollViewer}, AncestorLevel=1}, Path=Background}" />
+

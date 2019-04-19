@@ -1,0 +1,12 @@
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\App.g.cs
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\WpfApplication1_MarkupCompile.cache
+C:\Users\Marco\TraceWizard\Source\TraceWizard\bin\Debug\WpfApplication1.exe
+C:\Users\Marco\TraceWizard\Source\TraceWizard\bin\Debug\WpfApplication1.pdb
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\Window1.baml
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\Window1.g.cs
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\WpfApplication1.g.resources
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\WpfApplication1.exe
+C:\Users\Marco\TraceWizard\Source\TraceWizard\obj\Debug\WpfApplication1.pdb

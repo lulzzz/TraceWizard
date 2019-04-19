@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.TwStatusBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"
+    Height="22"
+    HorizontalAlignment="Stretch"
+    VerticalAlignment="Bottom"
+    >
+</UserControl>

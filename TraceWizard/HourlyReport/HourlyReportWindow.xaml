@@ -1,0 +1,11 @@
+﻿<Window x:Class="TraceWizard.TwApp.HourlyReportWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"        
+    ShowInTaskbar = "False"
+    SizeToContent = "WidthAndHeight"
+    WindowStartupLocation = "CenterOwner"
+    WindowStyle = "ToolWindow"
+>
+    <local:HourlyReportPanel x:Name="HourlyReportPanel" Margin="40" />
+</Window>

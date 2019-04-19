@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.CompareAnalysesPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"
+>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Style="{StaticResource GroupBoxBorderStyle}" >
+            <local:StyledEventsViewer x:Name="StyledEventsViewerUpper"/>
+        </Border>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="MinWidth" Value="150" />
+                    <Setter Property="Margin" Value="4,2" />
+                    <Setter Property="Padding" Value="4,2" />
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="ButtonLinkScrollBars" Content="Link ScrollBars" ToolTipService.ShowOnDisabled="True" 
+                ToolTip="Links upper scrollbar to lower one. (Both traces must have same timeframe.)"/>
+            <Button x:Name="ButtonSynchronizeGraphs" Content="Synchronize Graphs" ToolTipService.ShowOnDisabled="True"  ToolTipService.ShowDuration="60000" />
+            <Button x:Name="ButtonAppend" Content="Append" ToolTipService.ShowDuration="60000"/>
+        </StackPanel>
+        <Border Grid.Row="2"  Style="{StaticResource GroupBoxBorderStyle}" >
+            <local:StyledEventsViewer x:Name="StyledEventsViewerLower"/>
+        </Border>
+        <local:TwStatusBar Grid.Row="3" x:Name="StatusBar" DockPanel.Dock="Bottom"/>
+    </Grid>
+</UserControl>

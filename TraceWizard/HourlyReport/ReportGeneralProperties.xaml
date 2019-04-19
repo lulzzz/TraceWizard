@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.ReportGeneralProperties"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+VerticalAlignment="Top"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="File:" Padding="0,0,6,0" Grid.Row="0" Grid.Column="0" />
+        <TextBlock Name="LabelFile" Padding="0" Grid.Row="0" Grid.Column="1" />
+        <TextBlock Text="Start:" Padding="0,0,6,0" Grid.Row="1" Grid.Column="0" />
+        <TextBlock Name="LabelStart" Padding="0" Grid.Row="1" Grid.Column="1" />
+        <TextBlock Text="End:" Padding="0,0,6,0" Grid.Row="2" Grid.Column="0" />
+        <TextBlock Name="LabelEnd" Padding="0" Grid.Row="2" Grid.Column="1" />
+    </Grid>
+</UserControl>

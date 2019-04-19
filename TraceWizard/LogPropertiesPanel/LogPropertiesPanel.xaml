@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.LogPropertiesPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+    <Border Style="{StaticResource GroupBoxBorderStyle}" >
+        <!--GroupBox.Header-->
+        <!--TextBlock Name="Header" Text="Log" /-->
+        <!--/GroupBox.Header-->
+        <Grid VerticalAlignment="Top" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!--Button Name="ButtonLog" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" DockPanel.Dock="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="2" Padding="4,1" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" -->
+            <Button Name="ButtonLog" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" DockPanel.Dock="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="2" Padding="4,1" Style="{StaticResource ToolBarButtonStyle}">
+            <StackPanel Orientation="Horizontal">
+                    <Image HorizontalAlignment="Right" Source="../Images/table.png" Style="{DynamicResource ImageStyle}"/>
+                    <TextBlock HorizontalAlignment="Left" Grid.Column="1" Text="Log" Padding="3,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <TextBlock Margin="0,2,6,2" Padding="0" Foreground="DarkGray" HorizontalAlignment="Right" Text="MM Vol:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" ToolTip="Meter Master Volume"/>
+            <TextBlock Margin="0,2,0,2" Padding="0" Name="LabelMeterMasterVolume" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" />
+            <TextBlock Margin="0,2,6,2" Padding="0" Foreground="DarkGray" HorizontalAlignment="Right" Text="Reg Vol:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" ToolTip="Register Volume"/>
+            <TextBlock Margin="0,2,0,2" Padding="0" Name="LabelRegisterVolume" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" />
+            <TextBlock Margin="0,2,6,2" Padding="0" Foreground="DarkGray" HorizontalAlignment="Right" Text="Conv:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" ToolTip="Conversion Factor"/>
+            <TextBlock Margin="0,2,0,2" Padding="0" Name="LabelConversionFactor" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" />
+        </Grid>
+        <!--/GroupBox-->
+    </Border>
+</UserControl>

@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.FixtureTick"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:properties="clr-namespace:TraceWizard.TwApp.Properties"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"
+>
+    <Border Name="Border" Style="{StaticResource FixtureBorderStyle}">
+        <Image Name="Image" Style="{StaticResource ImageStyle}" />
+    </Border>
+</UserControl>

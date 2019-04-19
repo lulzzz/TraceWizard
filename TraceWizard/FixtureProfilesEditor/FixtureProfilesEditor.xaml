@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.FixtureProfilesEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"             
+    Margin="0,0,4,0"
+    Background="Transparent"
+     >
+    <StackPanel>
+        <local:FixtureProfileRow x:Name="FixtureProfileHeader" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ScrollViewer Name="ScrollViewer" Height="160" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" Padding="0,0,2,0" Margin="2,0">
+        <StackPanel Name="StackPanelRows" />
+        </ScrollViewer>
+    </StackPanel>
+</UserControl>

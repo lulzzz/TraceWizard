@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Marco\TraceWizard\Source\TraceWizard.Integration.nunit" total="6" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2010-01-23" time="02:01:46">
+  <environment nunit-version="2.5.3.9345" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.5.3\bin\net-2.0" machine-name="ANDRES" user="Marco" user-domain="ANDRES" />
+  <culture-info current-culture="es-MX" current-uiculture="en-US" />
+  <test-suite name="C:\Users\Marco\TraceWizard\Source\TraceWizard.Integration.nunit" executed="True" success="True" time="18.332" asserts="0">
+    <results>
+      <test-suite name="C:\Users\Marco\TraceWizard\Source\DatabaseAdo\DatabaseAdo.Tests\bin\x86\Debug\DatabaseAdo.Tests.dll" executed="True" success="True" time="18.321" asserts="0">
+        <results>
+          <test-suite name="TraceWizard" executed="True" success="True" time="18.314" asserts="0">
+            <results>
+              <test-suite name="Data" executed="True" success="True" time="18.310" asserts="0">
+                <results>
+                  <test-suite name="Plugin" executed="True" success="True" time="18.307" asserts="0">
+                    <results>
+                      <test-suite name="Ado" executed="True" success="True" time="18.302" asserts="0">
+                        <results>
+                          <test-suite name="Tests" executed="True" success="True" time="18.299" asserts="0">
+                            <results>
+                              <test-suite name="DatabaseAdoTests" executed="True" success="True" time="18.296" asserts="0">
+                                <results>
+                                  <test-case name="TraceWizard.Data.Plugin.Ado.Tests.DatabaseAdoTests.Create_FileNotFound_Exception" executed="True" success="True" time="3.444" asserts="0" />
+                                  <test-case name="TraceWizard.Data.Plugin.Ado.Tests.DatabaseAdoTests.Create_NotADatabase_Exception" executed="True" success="True" time="2.992" asserts="0" />
+                                  <test-case name="TraceWizard.Data.Plugin.Ado.Tests.DatabaseAdoTests.Create_TextFile_Exception" executed="True" success="True" time="3.040" asserts="0" />
+                                  <test-case name="TraceWizard.Data.Plugin.Ado.Tests.DatabaseAdoTests.Current_NotEmpty_ReturnsFlow" executed="True" success="True" time="2.951" asserts="3" />
+                                  <test-case name="TraceWizard.Data.Plugin.Ado.Tests.DatabaseAdoTests.Current_TwoRows_ReturnsFlow" executed="True" success="True" time="2.913" asserts="3" />
+                                  <test-case name="TraceWizard.Data.Plugin.Ado.Tests.DatabaseAdoTests.MoveNext_RowsNotEmpty_ReturnsTrue" executed="True" success="True" time="2.929" asserts="1" />
+                                </results>
+                              </test-suite>
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

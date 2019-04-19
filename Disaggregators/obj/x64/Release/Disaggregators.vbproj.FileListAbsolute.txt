@@ -1,0 +1,11 @@
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\bin\x64\Release\TraceWizard.Disaggregation.Disaggregators.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\bin\x64\Release\TraceWizard.Disaggregation.Disaggregators.pdb
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\bin\x64\Release\TraceWizard.CoreLibrary.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\bin\x64\Release\TraceWizard.Environment.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\bin\x64\Release\TraceWizard.CoreLibrary.pdb
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\bin\x64\Release\TraceWizard.Environment.pdb
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\obj\x64\Release\Disaggregators.vbprojResolveAssemblyReference.cache
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\obj\x64\Release\Resources.resources
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\obj\x64\Release\Disaggregators.vbproj.GenerateResource.Cache
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\obj\x64\Release\TraceWizard.Disaggregation.Disaggregators.dll
+C:\Users\Bill\Source\Repos\TraceWizard5\source\Disaggregators\obj\x64\Release\TraceWizard.Disaggregation.Disaggregators.pdb

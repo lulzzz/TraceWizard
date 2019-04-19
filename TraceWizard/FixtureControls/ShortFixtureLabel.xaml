@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.ShortFixtureLabel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+    <StackPanel MinWidth="34">
+        <TextBlock Name="LabelFixtureName" HorizontalAlignment="Center" />
+        <Border Name="Border" HorizontalAlignment="Center" Style="{StaticResource FixtureBorderStyle}" >
+            <Image Name="Image" Style="{StaticResource FixtureImageStyle}"/>
+        </Border>
+        <TextBlock Name="LabelFirstCycle" Text="1st Cycle" FontSize="10" HorizontalAlignment="Center" />
+    </StackPanel>
+</UserControl>

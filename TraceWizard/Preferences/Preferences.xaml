@@ -1,0 +1,283 @@
+﻿<Window x:Class="TraceWizard.TwApp.Preferences"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"        
+    ShowInTaskbar = "False" 
+    SizeToContent="WidthAndHeight"
+    WindowStartupLocation="CenterOwner"
+    WindowStyle="ToolWindow"
+        Title="Preferences"
+FocusManager.FocusedElement="{Binding ElementName=CheckBoxShowTraceTimeFrame}"
+    >
+    <StackPanel Margin="10" >
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <GroupBox Header="Trace Panel" Style="{StaticResource GroupBoxStyle}" >
+                    <StackPanel>
+                        <CheckBox Visibility="Collapsed"  Name="CheckBoxShowEventsGraph" Content="Show Events Graph " IsChecked="True" />
+                        <CheckBox Name="CheckBoxShowTimeFrameAboveGraph" Content="Time Frame Above Graph" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowTimeFrameAboveGraph, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowSelectionRulerAboveGraph" Content="Selection Ruler Above Graph" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowSelectionRulerAboveGraph, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowApprovalRulerAboveGraph" Content="Approval Ruler Above Graph" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowApprovalRulerAboveGraph, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowClassificationRulerAboveGraph" Content="Classification Ruler Above Graph" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowClassificationRulerAboveGraph, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowFixturesRulerAboveGraph" Content="Fixtures Ruler Above Graph" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowFixturesRulerAboveGraph, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowHorizontalGuideline" Content="Show Horizontal Guidelines" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowHorizontalGuideline, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowVerticalGuideline" Content="Show Vertical Guideline" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowVerticalGuideline, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowEventToolTips" Content="Show Event ToolTips" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowEventToolTips, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowDetailedEventToolTips" Margin="20,0,0,0" Content="Show Detailed Event ToolTips" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowDetailedEventToolTips, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowSimilarCountInEventToolTips" Margin="20,0,0,0" Content="Show Similar Count In Event ToolTips" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowSimilarCountInEventToolTips, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowGraphToolBarAboveGraph" Content="Graph ToolBar Above Graph" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowGraphToolBarAboveGraph, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowFixturesInGraphToolBar" Content="Show Fixtures in Graph ToolBar" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowFixturesInGraphToolBar, Mode=OneWay}" />
+                        <!-- disabled because if not shown, but adjacent panels are, there is an extra separator bar-->
+                        <CheckBox Visibility="Collapsed" Name="CheckBoxShowSummaryPanel" Content="Show Summary Panel"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowSummaryPanel, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowUnusedFixtures" Content="Show Unused Fixtures in Summary Panel" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowUnusedFixtures, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowLogPanel" Content="Show Log Panel"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowLogPanel, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowPieChartsPanel" Content="Show Pie Charts Panel"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowPieChartsPanel, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowReportsPanel" Content="Show Reports Panel"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowReportsPanel, Mode=OneWay}" />
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Colors" Style="{StaticResource GroupBoxStyle}" >
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Tick Color:" Padding="0,0,0,6"/>
+                            <ComboBox Name="ComboBoxSelectionTickColor" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="Black"
+                                IsSelected="{Binding Source={StaticResource Settings}, Path=Default.SelectionTickColor, Converter={StaticResource TagConverter}, ConverterParameter=Black, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="Black" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Black" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="DarkGray"
+                                IsSelected="{Binding Source={StaticResource Settings}, Path=Default.SelectionTickColor, Converter={StaticResource TagConverter}, ConverterParameter=DarkGray, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="DarkGray" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Dark Gray" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="LightGray"
+                                IsSelected="{Binding Source={StaticResource Settings}, Path=Default.SelectionTickColor, Converter={StaticResource TagConverter}, ConverterParameter=LightGray, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="LightGray" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Light Gray" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Vertical Guideline Color:" Padding="0,0,0,6"/>
+                            <ComboBox Name="ComboBoxGraphVerticalGuidelineColor" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="Black"
+                                IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphVerticalGuidelineColor, Converter={StaticResource TagConverter}, ConverterParameter=Black, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="Black" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Black" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="DarkGray"
+                                IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphVerticalGuidelineColor, Converter={StaticResource TagConverter}, ConverterParameter=DarkGray, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="DarkGray" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Dark Gray" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="LightGray"
+                                IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphVerticalGuidelineColor, Converter={StaticResource TagConverter}, ConverterParameter=LightGray, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="LightGray" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Light Gray" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Horizontal Guideline Color:" Padding="0,0,0,6"/>
+                            <ComboBox DockPanel.Dock="Right" Name="ComboBoxGraphHorizontalGuidelineColor" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="Black"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphHorizontalGuidelineColor, Converter={StaticResource TagConverter}, ConverterParameter=Black, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="Black" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Black" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="DarkGray"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphHorizontalGuidelineColor, Converter={StaticResource TagConverter}, ConverterParameter=DarkGray, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="DarkGray" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Dark Gray" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="LightGray"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphHorizontalGuidelineColor, Converter={StaticResource TagConverter}, ConverterParameter=LightGray, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="LightGray" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Light Gray" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Graph Background Color:" Padding="0,0,0,6"/>
+                            <ComboBox Name="ComboBoxGraphBackgroundColor" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="Silver"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphBackgroundColor, Converter={StaticResource TagConverter}, ConverterParameter=Silver, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="Silver" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="Silver" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="White"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.GraphBackgroundColor, Converter={StaticResource TagConverter}, ConverterParameter=White, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="White" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="White" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Window Background Color:" Padding="0,0,0,6"/>
+                            <ComboBox Name="ComboBoxAnalysisPanelBackgroundColor" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="White"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.AnalysisPanelBackgroundColor, Converter={StaticResource TagConverter}, ConverterParameter=White, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="White" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="White" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="LightGray"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.AnalysisPanelBackgroundColor, Converter={StaticResource TagConverter}, ConverterParameter=LightGray, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="LightGray" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="LightGray" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                                <ComboBoxItem Tag="AliceBlue"
+                                    IsSelected="{Binding Source={StaticResource Settings}, Path=Default.AnalysisPanelBackgroundColor, Converter={StaticResource TagConverter}, ConverterParameter=AliceBlue, Mode=OneWay}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Background="AliceBlue" Width="6" Height="6" Margin="4,0" BorderBrush="Black" BorderThickness="1"/>
+                                        <TextBlock Text="AliceBlue" />
+                                    </StackPanel>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Commands" Style="{StaticResource GroupBoxStyle}" >
+                    <StackPanel>
+                        <CheckBox Name="CheckBoxCycleCommandActions" Content="Select next/previous command cycles" ToolTip="When reaching the end of the trace while executing Select Next/Previous command, continue search from the start." IsChecked="{Binding Source={StaticResource Settings}, Path=Default.CycleCommandActions, Mode=OneWay}" />
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+            <StackPanel>
+                <GroupBox Header="When Opening Trace" Style="{StaticResource GroupBoxStyle}" >
+                    <StackPanel>
+                        <CheckBox Name="CheckBoxShowTraceTimeFrame"  Content="Show Time Frame of Trace" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowTraceTimeFrame, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowViewTimeFrame" Content="Show Time Frame of View" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowViewTimeFrame, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowSelectionRulerByDefault" Content="Show Selection Ruler" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowSelectionRulerByDefault, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowApprovalRulerByDefault" Content="Show Approval Ruler" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowApprovalRulerByDefault, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowClassificationRulerByDefault" Content="Show Classification Ruler" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowClassificationRulerByDefault, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowFixturesRulerByDefault" Content="Show Fixtures Ruler" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowFixturesRulerByDefault, Mode=OneWay}" ToolTip="This setting only affects short views (20 minutes or shorter). The Fixtures Ruler is never shown for longer views."/>
+                        <CheckBox Name="CheckBoxSelectFirstEvent" Content="Select First Event" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.SelectFirstEvent, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowGraphToolBar" Content="Show Graph ToolBar"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowGraphToolBar, Mode=OneWay}" />
+                        <CheckBox Margin="20,0,0,0" Name="CheckBoxSingleLineGraphToolBar" Content="Single Row Graph ToolBar" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.SingleLineGraphToolBar, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowEventPanelsOnLeft" Content="Show Event Panels on Left"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowEventPanelsOnLeft, Mode=OneWay}" />
+                        <CheckBox Margin="20,0,0,0" Name="CheckBoxShowSelectedEventPanel" Content="Show Selected Event Panel" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowSelectedEventPanel, Mode=OneWay}" />
+                        <CheckBox Margin="20,0,0,0" Name="CheckBoxShowCurrentEventPanel" Content="Show Current Event Panel" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowCurrentEventPanel, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowCommandPanel" Content="Show Command Panel"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowCommandPanel, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowStatusBar" Content="Show Status Bar"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowStatusBar, Mode=OneWay}" />
+                        <CheckBox Name="CheckBoxShowClassifyFirstCyclesUsingMachineLearningButton" Content="Show Classify 1st Cycles Using Machine Learning"  IsChecked="{Binding Source={StaticResource Settings}, Path=Default.ShowClassifyFirstCyclesUsingMachineLearningButton, Mode=OneWay}" />
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Classification Action Mode:" Padding="0,0,0,6"/>
+                            <ComboBox Name="ComboBoxClassificationActionMode" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="Selected" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ClassificationActionMode, Converter={StaticResource TagConverter}, ConverterParameter=Selected, Mode=OneWay}" Content="Selected" />
+                                <ComboBoxItem Tag="All" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ClassificationActionMode, Converter={StaticResource TagConverter}, ConverterParameter=All, Mode=OneWay}" Content="All" />
+                                <ComboBoxItem Tag="Forward" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ClassificationActionMode, Converter={StaticResource TagConverter}, ConverterParameter=Forward, Mode=OneWay}" Content="Forward" />
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Manual Classification Mode:" Padding="0,0,0,6"/>
+                            <ComboBox Name="ComboBoxManualClassificationMode" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="Without Adoption" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ManualClassificationMode, Converter={StaticResource TagConverter}, ConverterParameter=Without Adoption, Mode=OneWay}" Content="Without Similar" />
+                                <ComboBoxItem Tag="With Adoption" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ManualClassificationMode, Converter={StaticResource TagConverter}, ConverterParameter=With Adoption, Mode=OneWay}" Content="With Similar" />
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Classifier:" Padding="0,0,0,6"/>
+                            <ComboBox DockPanel.Dock="Right" Name="ComboBoxDefaultClassifier" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="200" Margin="6,0" >
+                                <ComboBoxItem Tag="J48 Classifier" Content="J48 Classifier" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.Classifier, Converter={StaticResource TagConverter}, ConverterParameter=J48 Classifier, Mode=OneWay}" />
+                                <ComboBoxItem Tag="J48 Clothes Washer Front Classifier" Content="J48 Clothes Washer Front Classifier" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.Classifier, Converter={StaticResource TagConverter}, ConverterParameter=J48 Clothes Washer Front Classifier, Mode=OneWay}" />
+                                <ComboBoxItem Tag="J48 Clothes Washer Top Classifier" Content="J48 Clothes Washer Top Classifier" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.Classifier, Converter={StaticResource TagConverter}, ConverterParameter=J48 Clothes Washer Top Classifier, Mode=OneWay}" />
+                                <ComboBoxItem Tag="J48 Indoor Classifier" Content="J48 Indoor Classifier" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.Classifier, Converter={StaticResource TagConverter}, ConverterParameter=J48 Indoor Classifier, Mode=OneWay}" />
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Find Mode:" Padding="0,0,0,6"/>
+                            <ComboBox Name="ComboBoxFindMode" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="Any" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.FindMode, Converter={StaticResource TagConverter}, ConverterParameter=Any, Mode=OneWay}" Content="Any Fixture" />
+                                <ComboBoxItem Tag="Selected" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.FindMode, Converter={StaticResource TagConverter}, ConverterParameter=Selected, Mode=OneWay}" Content="Selected Fixture" />
+                                <ComboBoxItem Tag="Similar" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.FindMode, Converter={StaticResource TagConverter}, ConverterParameter=Similar, Mode=OneWay}" Content="Similar Fixture" />
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Default Time Frame View:" Padding="0,0,0,6"/>
+                            <ComboBox DockPanel.Dock="Right" Name="ComboBoxViewportSeconds" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="6,0" MinWidth="100" Background="Transparent" BorderBrush="LightGray" Focusable="True" Width="120" Margin="6,0" >
+                                <ComboBoxItem Tag="10 minutes" Content="10 minutes" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ViewportSeconds, Converter={StaticResource TagConverter}, ConverterParameter=10 minutes, Mode=OneWay}" />
+                                <ComboBoxItem Tag="20 minutes" Content="20 minutes" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ViewportSeconds, Converter={StaticResource TagConverter}, ConverterParameter=20 minutes, Mode=OneWay}" />
+                                <ComboBoxItem Tag="2 hours" Content="2 hours" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ViewportSeconds, Converter={StaticResource TagConverter}, ConverterParameter=2 hours, Mode=OneWay}" />
+                                <ComboBoxItem Tag="6 hours" Content="6 hours" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ViewportSeconds, Converter={StaticResource TagConverter}, ConverterParameter=6 hours, Mode=OneWay}" />
+                                <ComboBoxItem Tag="1 day" Content="1 day" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ViewportSeconds, Converter={StaticResource TagConverter}, ConverterParameter=1 day, Mode=OneWay}" />
+                                <ComboBoxItem Tag="7 days" Content="7 days" IsSelected="{Binding Source={StaticResource Settings}, Path=Default.ViewportSeconds, Converter={StaticResource TagConverter}, ConverterParameter=7 days, Mode=OneWay}" />
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Classification Using Machine Learning" Style="{StaticResource GroupBoxStyle}" >
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Name="LabelMinutesToStartFirstCycle" Text="Minutes to Start 1st Cycle:" Padding="0,0,6,0" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                            <TextBox Name="TextBoxMinutesToStartFirstCycle" Padding="0" MaxLength="2" Width="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                             ToolTip="{Binding RelativeSource={RelativeSource Self},Path=(Validation.Errors)[0].ErrorContent}">
+                                <TextBox.Text>
+                                    <Binding Path="Default.MinutesToStartFirstCycle" Source="{StaticResource Settings}" Mode="TwoWay" >
+                                        <Binding.ValidationRules>
+                                            <local:NumberRangeRule Min="1" Max="60" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+                        </StackPanel>
+                        <TextBlock Name="TextBlockErrorMinutesToStartFirstCycle" Padding="0" Foreground="Red" HorizontalAlignment="Left"
+                        FontSize="10" Text="{Binding ElementName=TextBoxMinutesToStartFirstCycle, Path=(Validation.Errors)[0].ErrorContent}" />
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Background Save" Style="{StaticResource GroupBoxStyle}" >
+                    <StackPanel>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Name="LabelMinutesBetweenBackgroundSaves" Text="Minutes between Background Saves:" Padding="0,0,6,0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                                <TextBox Name="TextBoxMinutesBetweenBackgroundSaves" MaxLength="3" Padding="0" Width="35"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                             ToolTip="{Binding RelativeSource={RelativeSource Self},Path=(Validation.Errors)[0].ErrorContent,Mode=OneWay}" >
+                                    <TextBox.Text>
+                                        <Binding Path="Default.MinutesBetweenBackgroundSaves" Source="{StaticResource Settings}" >
+                                            <Binding.ValidationRules>
+                                                <local:NumberRangeRule Min="1" Max="120" />
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </TextBox.Text>
+                                </TextBox>
+                            </StackPanel>
+                            <TextBlock Name="TextBlockErrorMinutesBetweenBackgroundSaves" Padding="0" Foreground="Red" HorizontalAlignment="Left"
+                        FontSize="10" Text="{Binding ElementName=TextBoxMinutesBetweenBackgroundSaves, Path=(Validation.Errors)[0].ErrorContent}" />
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Name="ButtonOk" Content="OK" Width="100" Height="30" Margin="0,0,5,0" IsDefault="True" 
+            HorizontalAlignment="Right" HorizontalContentAlignment="Center" />
+            <Button Name="ButtonCancel" Content="Cancel" Width="100" Height="30" Margin="5,0,0,0" IsCancel="True"
+            HorizontalAlignment="Right" HorizontalContentAlignment="Center" />
+        </StackPanel>
+    </StackPanel>
+</Window>

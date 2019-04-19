@@ -1,0 +1,1508 @@
+<html>
+<head>
+<title>Trace Wizard Release Notes</title>
+<style type="text/css">
+body {
+width:800px;
+font-size:12px;
+font-family:Helvetica;
+}
+th, td {
+text-align:left;
+vertical-align:top;
+padding:10px;
+}
+table {
+margin-bottom:20px;
+width:100%;
+}
+h1, h2 {
+text-align:center;
+}
+h2 {
+border-bottom:dotted 1px;
+padding:10px;
+margin:10px;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Trace Wizard Release Notes</h1>
+
+<div style="text-align:center;margin-bottom:40px;">
+<a href="#change-notes">Change Notes</a> 
+&nbsp;&nbsp;&nbsp;
+<a href="#known-bugs">Known Bugs</a>
+</div >
+
+<h2 id="change-notes">Change Notes</h2>
+<table>
+
+    <tr>
+        <th>
+            Version
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Notes
+        </th>
+    </tr>
+    <tr>
+        <td>
+            5.3.0.0
+        </td>
+        <td>
+            Sat,&nbsp;March&nbsp;16,&nbsp;2019
+        </td>
+        <td>
+            <p>Installer update, Compiler environment update.</p>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            5.2.2.1
+        </td>
+        <td>
+            Sat,&nbsp;May&nbsp;25,&nbsp;2013
+        </td>
+        <td>
+            <p>Support semicolon comment character in log config file. Show SiteID and Nutation Rate for ManuFlo in Log Properties Detail Tooltip. Force Preference SelectionTickColor to have a value, eliminating crash when saving preferences (Fixed bug #133). Simplified feature levels (now just Pro and Demo).</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.2.2.0
+        </td>
+        <td>
+            Thu,&nbsp;May&nbsp;23,&nbsp;2013
+        </td>
+        <td>
+            <p>Don't require unique file extensions for logger format; peek inside to determine format. Support configurable DateTimeFormat and NutationRate settings in .config files. For each setting, TW will first look in the .config file with the same filename as the logger file (e.g., L-07596S011_pilot home 1.config). If the setting is not found there, it will then look for it in logger.config in the same folder. Here is a sample of the config file contents:</p>
+            <div style="font-family:Courier;">
+                DateTimeFormat,dd/MM/yy HH:mm:ss<br />
+                NutationRate,0.01388888
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.2.1.0
+        </td>
+        <td>
+            Mon,&nbsp;May&nbsp;20,&nbsp;2013
+        </td>
+        <td>
+            <p>
+                Add support for Abu Dhabi log files with txt extension, MM/dd/yy HH:mm:ss format, 5-second interval, and 1/72 conversion factor. Files optionally terminate with "=". Seconds elapsed field optionally present, but ignored. Site ID is ignored.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.2.0.0
+        </td>
+        <td>
+            Fri,&nbsp;May&nbsp;3,&nbsp;2013
+        </td>
+        <td>
+            <p>
+                Fixed Brainard CSV log data bug: excessive quoting and numerical commas (fixed bug #131).
+            </p><p>
+                Fixed bug where if user removes a numerical Preference (e.g., Minutes to Start 1st Cycle, Minutes to Background Save) and clicks Cancel, application was crashing (fixed bug #132).
+            </p><p>
+                Added Apply Conversion Factor feature.
+            </p><p>
+                Simplified bug reporting experience. Removed internet uploads of bug reports. Removed "Report a Bug..." feature.
+            </p><p>
+                Removed update feature, version checking, usage tracking. Show version number and feature level in upper right of main window.
+            </p><p>
+                Added Global section to Shortcuts Help (change start time, apply conversion factor). Rebranded TW Tips as Knowledge Base, reorganized Help menu accordingly.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.30
+        </td>
+        <td>
+            Tue,&nbsp;Feb&nbsp;7,&nbsp;2012
+        </td>
+        <td>
+            <p>
+                Don't allow version updates for Demo Version (fixed bug #130).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.28
+        </td>
+        <td>
+            Mon,&nbsp;Jan&nbsp;23,&nbsp;2012
+        </td>
+        <td>
+            <p>
+                Removed Daily/Hourly report from Report Panel (still accessible via Reports menu) (thereby fixing bug #129).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.27
+        </td>
+        <td>
+            Thu,&nbsp;Jan&nbsp;19,&nbsp;2012
+        </td>
+        <td>
+            <p>
+                Hourly Report now called Daily and Hourly Report. Shows hourly totals for full days. Exporting not supported.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.25
+        </td>
+        <td>
+            Tue,&nbsp;Jan&nbsp;17,&nbsp;2012
+        </td>
+        <td>
+            <p>
+                Added Cooler and Treatment columns to Project Report. When out of memory, notify user and exit but don't send bug report.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.24
+        </td>
+        <td>
+            Thu,&nbsp;Jan&nbsp;12,&nbsp;2012
+        </td>
+        <td>
+            <p>
+                Fix bug introduced in 5.1.0.23 when splitting an Unclassified event (fixed bug #128).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.23
+        </td>
+        <td>
+            Thu,&nbsp;Jan&nbsp;12,&nbsp;2012
+        </td>
+        <td>
+            <p>
+                Composite classifier now only uses fixture list, not machine learning.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.21
+        </td>
+        <td>
+            Wed,&nbsp;Dec&nbsp;21,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                As per spec, use composite classifier when user classifies using fixture list (that is, if event does not satisfy criteria of fixture list (and is not already manually classified or approved), it is then classified using machine learning.) Added Classification Action mode.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.20
+        </td>
+        <td>
+            Tue,&nbsp;Dec&nbsp;20,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bug fixes: update horizontal ruler when changing start time of trace (fixed bug #127).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.19
+        </td>
+        <td>
+            Mon,&nbsp;Dec&nbsp;19,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Moved backup folder to executable/application directory, rather than trace directory. Added Open | Recover Trace.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.18
+        </td>
+        <td>
+            Mon,&nbsp;Dec&nbsp;19,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Changed default filename when appending to use only site number, starttime of first trace, and endtime of second trace.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.17
+        </td>
+        <td>
+            Sun,&nbsp;Dec&nbsp;18,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Added TwTips #2 document (Navigating Graph). Added fixture list item constraint to commands. Bug fixes: make <i>Similar</i> command work again after <i>Similar count</i> command implementation (fixed bug #126).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.16
+        </td>
+        <td>
+            Fri,&nbsp;Dec&nbsp;16,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Added Log Integrity Report for Telematics. Bug fixes: made vertical axis ruler/ticks line up at bottom of graph, not top, when the max peak in the trace is less than 10 (fixed bug #125).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.15
+        </td>
+        <td>
+            Thu,&nbsp;Dec&nbsp;15,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Added minimal flow to beginning and end of Telematics trace when reading log in order to make the trace full length.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.14
+        </td>
+        <td>
+            Wed,&nbsp;Dec&nbsp;14,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bug fix (app crashed when user tried to merge or split events in the lower panel of the Compare Traces window (which would be pointless, since analysis can't be saved there) (Fixed bug #124)
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.13
+        </td>
+        <td>
+            Wed,&nbsp;Dec&nbsp;14,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bug fix (app crashed when user moused over event and tooltip could not be created) Provisional fix, not certain this corrects the problem, because cannot reproduce. (bug #123)
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.12
+        </td>
+        <td>
+            Wed,&nbsp;Dec&nbsp;14,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bring fixture into view (in fixture list) when adding or incorporating.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.11
+        </td>
+        <td>
+            Wed,&nbsp;Dec&nbsp;14,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Finished implementation of <i>Incorporate Into Fixture List</i> feature. Undo and Redo buttons show tooltip with name of action to be undone/redone. Unapprove feature. Respect Approve setting when classifying using machine learning or fixture list. Persist to trace: 1st was (or was not) manually classified.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.10
+        </td>
+        <td>
+            Tue,&nbsp;Dec&nbsp;13,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bug Fixes: Don't crash when open traces using the Compare Traces feature (fixed bug #122).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.9
+        </td>
+        <td>
+            Tue,&nbsp;Dec&nbsp;13,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Note to user: Copy template.csv to other directory before updating to this version or later (if you want to save it). That file will be deleted upon update.
+            </p>
+
+            <p>
+                Added <i>Apply To Fixture List</i> feature (not yet functional). Added <i>approve</i> for all previous and in view. Added command constraints: <i>list</i>, <i>machine</i>,<i>approved</i>. No longer delete feature keys during update.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.8
+        </td>
+        <td>
+            Mon,&nbsp;Dec&nbsp;12,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Support adding, deleting and reordering of rows in Fixture List. No longer using template.csv (use Fixture List Editor instead). Added Current Event panel. Allow merge of some but not all super events via selection. Added "approve" feature as well as classification ruler (and classification properties to Event Panel). Added ClassifiedUsingFixtureList and ManuallyApproved as flags in the database/trace file.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.7
+        </td>
+        <td>
+            Sun,&nbsp;Dec&nbsp;11,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                For manual disaggregation, use composite classifier that first tries to classify using Fixture List, then turns to Machine Learning classifier if necessary.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.6
+        </td>
+        <td>
+            Sun,&nbsp;Dec&nbsp;1,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Partial implementation of Fixture List feature: Load and save Fixture list from trace file (but still make edits in template.csv). Added buttons for Bookmark and Bring Into View commands. Vertical format for Selected Event panel.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.5
+        </td>
+        <td>
+            Fri,&nbsp;Dec&nbsp;09,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bug Fixes: Do not crash when user merges all super events into a base event, initiating the action from the base event rather than a super event, via menu (fixed bug #119).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.4
+        </td>
+        <td>
+            Thu,&nbsp;Dec&nbsp;08,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Preview of Fixture List feature (Fixture List editor, added Classify Using Fixture List button, removed Classifier ComboBox, align panels to left, not centered). If Fixture List does not classify a particular event, leave its classification unchanged, rather than changing to Unclassified. Throw exception (not assertion) when gap in Telematics log counter.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.3
+        </td>
+        <td>
+            Tue,&nbsp;Dec&nbsp;06,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                No changes to Trace Wizard itself. Made Version Updater a Windows app, not console app, and fixed bug caused by change in previous version of updater relating to template.csv. Added Trace Wizard Bug Notifier project to project solution (for hourly notification of bugs).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.2
+        </td>
+        <td>
+            Tue,&nbsp;Dec&nbsp;06,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Added Tips document (with corrections/clarifications) to Help menu. Version Updater no longer deletes template.csv file during update (in case user has made custom changes). No longer restarts app on application crash, because if the bug is happening during application startup, an infinite loop of startup-crash-startup-crash could occur.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.1
+        </td>
+        <td>
+            Mon,&nbsp;Dec&nbsp;05,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bug Fixes: Make Configurable Classifier work again (fixed bug #118).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.1.0.0
+        </td>
+        <td>
+            Mon,&nbsp;Dec&nbsp;05,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bumped version number.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.95.0
+        </td>
+        <td>
+            Mon,&nbsp;Dec&nbsp;05,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Support undo/redo for merge of contiguous events. Added commands: Similar (for similar counts), Refresh (to refresh similar counts before performing Similar command), super (is a super/simultaneos) event, notes (has user notes), start, end.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.94.1
+        </td>
+        <td>
+            Sun,&nbsp;Dec&nbsp;04,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Support undo/redo for merge of simultaneous events.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.94.0
+        </td>
+        <td>
+            Sat,&nbsp;Dec&nbsp;03,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Suppport Find if not exactly one event selected (start search from view shown). Support undo/redo for splits.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.93.0
+        </td>
+        <td>
+            Fri,&nbsp;Dec&nbsp;02,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Added bookmark feature via F2/F3 (as well as bookmark commands and start/end commands).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.92.2
+        </td>
+        <td>
+            Thu,&nbsp;Dec&nbsp;01,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bumped version number to test update process.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.92.1
+        </td>
+        <td>
+            Thu,&nbsp;Dec&nbsp;01,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Fixed broken update process when updating from version 5.0.90.0 only (fixed bug #116).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.92.0
+        </td>
+        <td>
+            Thu,&nbsp;Dec&nbsp;01,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Make undo/redo feature restore graph position. Allow user customization of Find Mode and Manual Classification Mode. Added "Classify Similar" to commands. Added vertical zoom buttons to graph toolbar. Added access keys for main toolbar menu buttons. Add function key support for zoom. Restyled help documents. Bug fixes: Make vertical ruler ticks align with horizontal guidelines of graph (fixed bug #114). Don't allow Select All command with Similar constraint if no event selected (fixed bug #115).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.91.1
+        </td>
+        <td>
+            Wed,&nbsp;Nov&nbsp;30,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Bug fixes: Suppport undo/redo for adoption (fixed bug #113).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.91.0
+        </td>
+        <td>
+            Tue,&nbsp;Nov&nbsp;29,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Added Undo/Redo feature.
+            </p><p>
+                Bug fixes: In command panel, Classify command should only apply to selected events, not all events (fixed bug #112).
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.90.0
+        </td>
+        <td>
+            Mon,&nbsp;Nov&nbsp;28,&nbsp;2011
+        </td>
+        <td>
+            <p>
+                Telematics: Accept input with backflow. Added Append and Synchronize buttons on Compare Traces panel. Support changing start time of trace.
+            </p><p>
+                Commands: Added select all, view, classify as, time, exclude fixtures, additional constraints, updated commands help.
+            </p><p>
+                Added Graph toolbar (select all, find, zoom, merge/split, 1st cycle). Classify via drag-drop (including 1st cycles).
+            </p><p>
+                Added status bar (displays help). Full Screen mode. Show time frame of trace. Added Fixtures Ruler. Added Selection Ruler/Ticks. Added vertical guideline.
+            </p><p>
+                User Preferences: configurable layout, colors, show/hide unused fixtures, show/hide tooltips.
+            </p><p>
+                Added Save button (in addition to previously existing Save As button). File Open Dialog windows: Show all files types (traces, logs, or logs and traces, including zip).
+            </p><p>
+                Layout/appearance: Eliminated upper-level tab, moved reports and research to main window. Elimated placeholder scrollbars on graph. Eliminated Diagnostics menu item, version number on toolbar. Enabled update version menu item. Menu icons. Rearranged panels, eliminated groupbox labels to allow more height for graph. Redrew several icons. Improved look of disabled buttons.
+            </p><p>
+                Reports Menu: Menu access to run multiple reports of type summary and distribution reports.
+            </p><p>
+                Tools menu: Added menu items for exporting Weka and exemplars database (for nearest neighbor classifier). Export mdb to csv, tdb to twdb, logs to twdb. Confusion matrix: allow selection of multiple classifiers.
+            </p><p>
+                Command line: Added command line support for exporters /mdbtocsv, /tdbtotwdb, /logtotwdb. Added help for command line. Added drag-drop support for dragging logs and traces from Windows into TW.
+            </p><p>
+                Scroll graph by dragging.
+            </p><p>
+                Bug fixes: Don't display deleted post-merge event as selected event (fixed bug #108). Fixed command line support for loading logs and traces into TW via Windows command line (fixed bug #109). Don't warn to save changes in Compare Traces panel (fixed bug #110). Improved startup time (don't load unused adopters, load classifiers on demand) and trace load time.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.59.0
+        </td>
+        <td>
+            Thu,&nbsp;Nov&nbsp;03,&nbsp;2011
+        </td>
+        <td>
+            Get datetime from Telematics filename. Show FirstCycle in Event Properties Panel, show first cycle deltas in Fixtures Panel. Added access key for FirstCycle, classify First Cycles feature, configure in Preferences. Distribution Report.
+            Bug fixes: Allow user to switch to other applications when TW shows modal dialog.(fixed bug #107).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.58.7
+        </td>
+        <td>
+            Mon,&nbsp;Oct&nbsp;31,&nbsp;2011
+        </td>
+        <td>
+            Further minor improvements to Compare Analyses feature (disable Classify button, show filenames in header tooltip).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.58.6
+        </td>
+        <td>
+            Mon,&nbsp;Oct&nbsp;31,&nbsp;2011
+        </td>
+        <td>
+            Made Compare Analyses mode more truly read-only, since no classification possible in this mode.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.58.5
+        </td>
+        <td>
+            Sun,&nbsp;Oct&nbsp;30,&nbsp;2011
+        </td>
+        <td>
+            Bumped version number to test upgrade user preferences.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.58.4
+        </td>
+        <td>
+            Sun,&nbsp;Oct&nbsp;30,&nbsp;2011
+        </td>
+        <td>
+            Only show Log Properties Panel when we have log info available. Save user preferences for Log and Analysis directories, default classifier, minutes between background save (Help menu: Preferences). Upgrade user preferences on startup.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.58.0
+        </td>
+        <td>
+            Fri,&nbsp;Oct&nbsp;28,&nbsp;2011
+        </td>
+        <td>
+            Update telematics format to use cubic meters, discard the first reading, use instead to calibrate.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.57.3
+        </td>
+        <td>
+            Sun,&nbsp;Oct&nbsp;23,&nbsp;2011
+        </td>
+        <td>
+            Fixed labels in fixture menu. Development: Added tutorial script to project.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.57.2
+        </td>
+        <td>
+            Fri,&nbsp;Oct&nbsp;21,&nbsp;2011
+        </td>
+        <td>
+            Real-time bug reporting (upon occurrence), send stack trace. Include PDB files in release to support bug reporting. Restart app after crash.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.57.1
+        </td>
+        <td>
+            Thu,&nbsp;Oct&nbsp;20,&nbsp;2011
+        </td>
+        <td>
+            Bumped version number to test Version Updater changes. More refactoring.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.57.0
+        </td>
+        <td>
+            Thu,&nbsp;Oct&nbsp;20,&nbsp;2011
+        </td>
+        <td>
+            Added bug reporting to help menu. Added time to update tracking filename. Development: refactored Environment project and release process utility.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.56.0
+        </td>
+        <td>
+            Tue,&nbsp;Oct&nbsp;18,&nbsp;2011
+        </td>
+        <td>
+            Updated to reflect latest changes to Telematics format. Automated release process.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.55.0
+        </td>
+        <td>
+            Mon,&nbsp;Oct&nbsp;17,&nbsp;2011
+        </td>
+        <td>
+            Broke out log properties, added Reports panel, labels on Fixtures Panel. Now using GroupBoxes. Development: XAML-ified various user controls (code cleanup).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.8
+        </td>
+        <td>
+            Sun,&nbsp;Oct&nbsp;16,&nbsp;2011
+        </td>
+        <td>
+            Save user preferences during version update (VersionUpdater now at version 1.5)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.7
+        </td>
+        <td>
+            Sat,&nbsp;Oct&nbsp;15,&nbsp;2011
+        </td>
+        <td>
+            Added expander for Fixtures Profile Editor. Removed fixtures collapser button. Enlarge pie chart by double-clicking. Added version update tracking and usage tracking. HTML-ified shortcuts help; added Commands to shortcuts help. Bug fixes: Correctly handle case where removing a selected event from a multiple selection (fixed bug #104, SelectedPolygon and SelectedEvents were out of synch). Make pie charts update correctly (fixed bug #105, introduced in 5.0.5x.x).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.6
+        </td>
+        <td>
+            Fri,&nbsp;Oct&nbsp;14,&nbsp;2011
+        </td>
+        <td>
+            No executable changes, just bumped version number to test fixed Version Updater.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.5
+        </td>
+        <td>
+            Fri,&nbsp;Oct&nbsp;14,&nbsp;2011
+        </td>
+        <td>
+            Updated TwVersionUpdater.exe to not download itself (fixed bug??). Added/modified Update Version window on startup. Display release notes of to-be-downloaded version.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.4
+        </td>
+        <td>
+            Thu,&nbsp;Oct&nbsp;13,&nbsp;2011
+        </td>
+        <td>
+            Added Command panel (commands: next, previous). Added short labels Event Panel. Select first event upon opening trace. Added fixture image to piechart tooltip. Added access keys for FindNext/Previous Fixture menu. Bug fixes: Fixed menu access keys for Hottub and Duplicate (fixed bug #95). In context menu, vertically aligned fixture label with access key (fixed bug #103).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.3
+        </td>
+        <td>
+            Wed,&nbsp;Oct&nbsp;12,&nbsp;2011
+        </td>
+        <td>
+            Show in Event Panel whether classification was manual (e.g., Preserved).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.2
+        </td>
+        <td>
+            Wed,&nbsp;Oct&nbsp;12,&nbsp;2011
+        </td>
+        <td>
+            Partial GUI for Integrated Template Classifier (no input capabilities yet, only display of Fixture Profiles).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.1
+        </td>
+        <td>
+            Wed,&nbsp;Oct&nbsp;12,&nbsp;2011
+        </td>
+        <td>
+            Added Integrated Template Classifier (partial implementation: file support only, no GUI).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.54.0
+        </td>
+        <td>
+            Tue,&nbsp;Oct&nbsp;11,&nbsp;2011
+        </td>
+        <td>
+            Added collapser button to show/hide zero fixtures in Fixtures Panel.
+            Line up Totals and Log Properties in Fixtures Panel with Fixtures (fixed bug #101).
+            Respond to selection via keyboard after selecting classifier (fixed bug #102).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.53.3
+        </td>
+        <td>
+            Mon,&nbsp;Oct&nbsp;03,&nbsp;2011
+        </td>
+        <td>
+            In Project Report, calculate OtherEvents correctly (fixed bug #99).
+            In Project Report, show Null, not Infinity (fixed bug #100)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.53.2
+        </td>
+        <td>
+            Mon,&nbsp;Oct&nbsp;03,&nbsp;2011
+        </td>
+        <td>
+            Correctly report FirstCycle in EventsDatabase (fixed bug #98)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.53.1
+        </td>
+        <td>
+            Fri,&nbsp;Sep&nbsp;30,&nbsp;2011
+        </td>
+        <td>
+            Added to test update version with release notes
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.53.0
+        </td>
+        <td>
+            Fri,&nbsp;Sep&nbsp;30,&nbsp;2011
+        </td>
+        <td>
+            Added release notes
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.52.0
+        </td>
+        <td>
+            Wed,&nbsp;Sep&nbsp;28,&nbsp;2011
+        </td>
+        <td>
+            Support Telematics log file (initial implementation)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.51.2
+        </td>
+        <td>
+            Wed,&nbsp;Sep&nbsp;28,&nbsp;2011
+        </td>
+        <td>
+            Fixed Version Updater so that Ionic dll can be overwritten. To install this version, user must delete contents of TW application folder and install/unzip this version manually. Subsequent versions should be updateable using the built-in Version Updater. (fixed; bug #97)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.50.2
+        </td>
+        <td>
+            Thu,&nbsp;Sep&nbsp;8,&nbsp;2011
+        </td>
+        <td>
+            Warn when user attempts to compare analyses that do not have compatible timeframes
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.50.1
+        </td>
+        <td>
+            Wed,&nbsp;Sep&nbsp;7,&nbsp;2011
+        </td>
+        <td>
+            Eliminated baseline threshold for vertical split per Leslie request (fixed; bug #96).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.50.0
+        </td>
+        <td>
+            Fri,&nbsp;Aug&nbsp;19,&nbsp;2011
+        </td>
+        <td>
+            Use Jet.OLEDB.4.0 connection string instead of ACE.OLEDB.12.0 connection string for Access 2010 compatibility.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.49.3
+        </td>
+        <td>
+            Thu,&nbsp;Aug&nbsp;18,&nbsp;2011
+        </td>
+        <td>
+            Utility to batch convert from MDB log to CSV. Temporarily removed Convert from Access97 feature (so this version of TW5 won't run with Access 2010 installed).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.49.2
+        </td>
+        <td>
+            Tue,&nbsp;Aug&nbsp;16,&nbsp;2011
+        </td>
+        <td>
+            Convert Access97 MDBs to Access2007, Access2002.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.48.0
+        </td>
+        <td>
+            Sun,&nbsp;Aug&nbsp;7,&nbsp;2011
+        </td>
+        <td>
+            About box.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.47.0
+        </td>
+        <td>
+            Tue,&nbsp;Jun&nbsp;28,&nbsp;2011
+        </td>
+        <td>
+            Classify via Fixture button. Moved Notes to bottom of Event panel.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.46.0
+        </td>
+        <td>
+            Tue,&nbsp;Jun&nbsp;28,&nbsp;2011
+        </td>
+        <td>
+            Added Compare Analyses feature to Analysis tab.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.45.0
+        </td>
+        <td>
+            Mon,&nbsp;Jun&nbsp;27,&nbsp;2011
+        </td>
+        <td>
+            Added Event Panel. Display fixture class shortcut keys on event menu.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.44.0
+        </td>
+        <td>
+            Mon,&nbsp;Jun&nbsp;27,&nbsp;2011
+        </td>
+        <td>
+            Whitespace not trimmed from user notes (fixed; bug #93).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.43.0
+        </td>
+        <td>
+            Fri,&nbsp;Jun&nbsp;24,&nbsp;2011
+        </td>
+        <td>
+            Added user notes for events.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.42.0
+        </td>
+        <td>
+            Fri,&nbsp;Jun&nbsp;24,&nbsp;2011
+        </td>
+        <td>
+            Configurable Template Classifier (template.csv).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.41.0
+        </td>
+        <td>
+            Thu,&nbsp;Jun&nbsp;23,&nbsp;2011
+        </td>
+        <td>
+            User can choose classifier during analysis (comboBox).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.40.0
+        </td>
+        <td>
+            Thu,&nbsp;Jun&nbsp;23,&nbsp;2011
+        </td>
+        <td>
+            Attribute selector for Excel (Project) report.
+            Show KeyCode in Events Database Report. Show blank, not zero, for certain report elements (fixed; bug #91).
+            Removed support for 7z compression since not working (bug #92).
+            Moved temp folder for unzipping from application folder to user's temp folder, renamed TraceWizardTempFiles.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.39.0
+        </td>
+        <td>
+            Mon,&nbsp;Jun&nbsp;20,&nbsp;2011
+        </td>
+        <td>
+            Excel report.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.38.0
+        </td>
+        <td>
+            Thu,&nbsp;Jun&nbsp;16,&nbsp;2011
+        </td>
+        <td>
+            Supports zipped logger files.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.37.1
+        </td>
+        <td>
+            Wed,&nbsp;Jun&nbsp;15,&nbsp;2011
+        </td>
+        <td>
+            Logger cvs format does not support non-integral Conversion Factor (fixed; bug #90).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.37.0
+        </td>
+        <td>
+            Wed,&nbsp;May&nbsp;25,&nbsp;2011
+        </td>
+        <td>
+            Hourly Report shows fixture totals; Aggregate Report; Export to Aggregate (available in "Dev" version only).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.36.0
+        </td>
+        <td>
+            Thu,&nbsp;May&nbsp;5,&nbsp;2011
+        </td>
+        <td>
+            Hourly Report (available in "Dev" version only).
+            Meter code not being saved (fixed; bug #89)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.35.2
+        </td>
+        <td>
+            Mon,&nbsp;Apr&nbsp;18,&nbsp;2011
+        </td>
+        <td>
+            Added to enable testing of Update Version feature.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.35.1
+        </td>
+        <td>
+            Mon,&nbsp;Apr&nbsp;18,&nbsp;2011
+        </td>
+        <td>
+            Added to enable testing of Update Version feature.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.35.0
+        </td>
+        <td>
+            Mon,&nbsp;Apr&nbsp;18,&nbsp;2011
+        </td>
+        <td>
+            Added Update Version feature (Help menu).
+            Removed exemplars.twdb from distribution. Added TwVersionUpdater.exe and Ionic.Zip.dll to server.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.34.0
+        </td>
+        <td>
+            Sat,&nbsp;Apr&nbsp;16,&nbsp;2011
+        </td>
+        <td>
+            Don't classify initially. Added Classify button.
+            Fuzzy Toolbar Icons (fixed; bug #87); No Pie Chart Shown If All Events Same Fixture Class (fixed; bug #88)
+            Added Dev feature level; Once again pointing to Latest/Oldest version files on alphaprime.com, not aquacraft.com (temporary server problems at aquacraft).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.33.0
+        </td>
+        <td>
+            Fri,&nbsp;Apr&nbsp;15,&nbsp;2011
+        </td>
+        <td>
+            Added Feature Levels: Demo, Pro, Gold
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.32.1
+        </td>
+        <td>
+            Mon,&nbsp;Jan&nbsp;31,&nbsp;2011
+        </td>
+        <td>
+            Added classifiers for Top-Loading Clothes Washers and Front-Loading Clothes Washers
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.32.0
+        </td>
+        <td>
+            Sat,&nbsp;Jan&nbsp;20,&nbsp;2011
+        </td>
+        <td>
+            Show similar count in Event Properties tooltip; do not set First Cycle during manual classification
+            Turned off diagnostics.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.31.2
+        </td>
+        <td>
+            Sun,&nbsp;Oct&nbsp;31,&nbsp;2010
+        </td>
+        <td>
+            Disappearing base event after simultaneous split (bug #86); refix bug #85 (crash when simultaneous splitting at right edge of reverse J in event)
+            Turned on diagnostics temporarily.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.31.1
+        </td>
+        <td>
+            Fri,&nbsp;Oct&nbsp;29,&nbsp;2010
+        </td>
+        <td>
+            Roll back fix for bug #85 (crash when simultaneous splitting at right edge of reverse J in event).
+            Temporarily changed BackupSave interval from 10 minutes to 5 minutes.
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.31.1
+        </td>
+        <td>
+            Sat,&nbsp;Oct&nbsp;23,&nbsp;2010
+        </td>
+        <td>
+            Backup save.
+            Crash when simultaneous splitting at right edge of reverse J in event (fixed; bug #85).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.30.1
+        </td>
+        <td>
+            Fri,&nbsp;Oct&nbsp;15,&nbsp;2010
+        </td>
+        <td>
+            In TWDB file, date in @LOG and @FLOW sections are not double quoted (fixed; bug #81); DateTime format in TWDB file respects user settings (fixed; bug #82); Trace peak underestimated when loading from TWDB file (fixed; bug #84).
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.30.0
+        </td>
+        <td>
+            Tue,&nbsp;Oct&nbsp;12,&nbsp;2010
+        </td>
+        <td>
+            Swapped key shortcuts for Classify Without Adopt and Classify With Adopt. (Default is now without adopt.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.29.2
+        </td>
+        <td>
+            Mon,&nbsp;Aug&nbsp;30,&nbsp;2010
+        </td>
+        <td>
+            Black background in All The Way Out vertical view for trace with very high peak (fixed; bug #80)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5.0.29.1
+        </td>
+        <td>
+            Mon,&nbsp;Aug&nbsp;16,&nbsp;2010
+        </td>
+        <td>
+            After save, trace name truncated in tab header (fixed; bug #79)
+        </td>
+    </tr>
+
+</table>
+
+<h2 id="known-bugs">Known Bugs</h2>
+<table>
+
+<tr><th>
+Reported&nbsp;in
+</th><th>
+Bug&nbsp;#
+</th><th>
+Notes
+</th></tr>
+
+<tr><td>
+5.1.0.17
+</td><td>
+127
+</td><td>
+Commands that use fixture list (e.g., "toilet1") don't use latest edits to list. <i>Workaround:</i>Trigger save of fixture list edits by classifying using Fixture List before executing fixture list item command (after editing fixture list).
+</td></tr>
+
+<tr><td>
+5.1.0.9
+</td><td>
+122
+</td><td>
+Event context menu shows access keys for add/apply(incorporate) menu items, but pressing those keys (2 and 3) does not execute requested function. <i>Workaround</i>: use mouse or up/down arrows to access the menu item, or access the feature another way (e.g., select event, press 2 or 3).
+</td></tr>
+
+<tr><td>
+5.1.0.8
+</td><td>
+121
+</td><td>
+When moving fixture row to top of fixture list, the cursor enters the first attribute textbox instead of staying on the row selected. <i>Workaround</i>: Once the row has reached the top, to move it back down, reselect the row's row selector button.
+</td></tr>
+
+<tr><td>
+5.1.0.8
+</td><td>
+120
+</td><td>
+Crash when undoing the vertical merge of certain super events that can only be created with TW4. <i>Workaround:</i> No plans to fix, only affects TW4 traces.
+</td></tr>
+
+<tr><td>
+5.0.95.0
+</td><td>
+117
+</td><td>
+Contiguous merge not offered via context (pop-up) menu if target event has super event. <i>Workaround:</i> Perform merge via drag-and-drop.
+</td></tr>
+
+<tr><td>
+5.0.90.0
+</td><td>
+111
+</td><td>
+If user's Windows date/time format is set to day/month/year, TW crashes when trying to read CSV log format. <i>Workaround:</i> Windows Control Panel: Region and Language Settings: do not use day/month/year setting. Instead, use month/day/year (traditional in the US) or year/month/day.
+</td></tr>
+
+<tr><td>
+5.0.58.6
+</td><td>
+106
+</td><td>
+Vertical scroll not functional in Compare Analyses mode.
+</td></tr>
+
+<tr><td>
+5.0.44.0
+</td><td>
+94
+</td><td>
+Resizing TW window scrolls graph to left end (beginning).
+</td></tr>
+
+</table>
+
+</body>
+</html>

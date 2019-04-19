@@ -1,0 +1,22 @@
+﻿<Window x:Class="TraceWizard.TwApp.ArffSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Select Attributes" 
+    WindowStyle="ToolWindow"
+    SizeToContent="WidthAndHeight"
+    ShowInTaskbar="false"
+    WindowStartupLocation="CenterScreen"
+        >
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Bottom">
+            <Button DockPanel.Dock="Right"  x:Name="CancelButton" HorizontalAlignment="Right" Margin="0,6,6,6" Padding="3" Height="24" Width="72" IsCancel="true">Cancel</Button>
+            <Button DockPanel.Dock="Right" x:Name="OKButton" HorizontalAlignment="Right" Margin="3,6,6,6" Padding="3" Height="24"  Width="72" IsDefault="true" Click="okButton_Click">OK</Button>
+        </DockPanel>
+        <GroupBox Header="Attributes" DockPanel.Dock="Right" Margin="6">
+            <StackPanel x:Name="stackPanelAttributes"></StackPanel>
+        </GroupBox>
+        <GroupBox Header="Fixture Classes" DockPanel.Dock="Right" Margin="6">
+            <StackPanel x:Name="stackPanelFixtureClasses"></StackPanel>
+        </GroupBox>
+    </DockPanel>
+</Window>

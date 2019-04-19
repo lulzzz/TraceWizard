@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1AFD2CB-5EDD-443B-8038-12F12312BA86}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TraceWizard.TwApp</RootNamespace>
+    <AssemblyName>TraceWizard</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>Images\TraceWizard.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>3776D06A1F7A056CE81469F1771B02C793B0868D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>TraceWizard_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>..\..\Publish\TraceWizard\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\$(AssemblyName)\$(Configuration)</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\$(AssemblyName)\$(Configuration)</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\bin\$(AssemblyName)\$(Configuration)</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\$(AssemblyName)\$(Configuration)</BaseIntermediateOutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DotNetZip-v1.9\Debug\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisPanel\AnalysisPanel.xaml.cs">
+      <DependentUpon>AnalysisPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisPanel\CompareAnalysesPanel.xaml.cs">
+      <DependentUpon>CompareAnalysesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalRuler\ApprovalRuler.xaml.cs">
+      <DependentUpon>ApprovalRuler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalRuler\ApprovalTick.xaml.cs">
+      <DependentUpon>ApprovalTick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClassificationRuler\ClassificationRuler.xaml.cs">
+      <DependentUpon>ClassificationRuler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClassificationRuler\ClassificationTick.xaml.cs">
+      <DependentUpon>ClassificationTick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\CommandParser.cs" />
+    <Compile Include="ConfusionMatrix\SelectClassifier.xaml.cs">
+      <DependentUpon>SelectClassifier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DateTimePicker\DateTimePickerWindow.xaml.cs">
+      <DependentUpon>DateTimePickerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DistributionReport\DistributionReport.cs" />
+    <Compile Include="DistributionReport\DistributionReportPanel.xaml.cs">
+      <DependentUpon>DistributionReportPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventPolygon\EventPolygon.xaml.cs">
+      <DependentUpon>EventPolygon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventPolygon\EventPolygonMenu.xaml.cs">
+      <DependentUpon>EventPolygonMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventProperties\EventProperties.xaml.cs">
+      <DependentUpon>EventProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventsCanvas\EventsCanvas.xaml.cs">
+      <DependentUpon>EventsCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventsViewer\EventsViewer.xaml.cs">
+      <DependentUpon>EventsViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventsViewer\StyledEventsViewer.xaml.cs">
+      <DependentUpon>StyledEventsViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureControls\FixtureButton.xaml.cs">
+      <DependentUpon>FixtureButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureControls\HorizontalFixtureLabel.xaml.cs">
+      <DependentUpon>HorizontalFixtureLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureProfilesEditor\FixtureProfileRow.xaml.cs">
+      <DependentUpon>FixtureProfileRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixturesRuler\FixturesRuler.xaml.cs">
+      <DependentUpon>FixturesRuler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixturesRuler\FixtureTick.xaml.cs">
+      <DependentUpon>FixtureTick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureSummaryReport\FixtureSummaryReport.cs" />
+    <Compile Include="FixtureSummaryReport\FixtureSummaryReportPanel.xaml.cs">
+      <DependentUpon>FixtureSummaryReportPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConversionFactor\ConversionFactorWindow.xaml.cs">
+      <DependentUpon>ConversionFactorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GraphToolBar\GraphToolBar.xaml.cs">
+      <DependentUpon>GraphToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HourlyReport\DailyTotalsDetail.xaml.cs">
+      <DependentUpon>DailyTotalsDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HourlyReport\HourlyReportWindow.xaml.cs">
+      <DependentUpon>HourlyReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HourlyReport\HourlyReportPanel.xaml.cs">
+      <DependentUpon>HourlyReportPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HourlyReport\HourlyTotalsDetail.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>HourlyTotalsDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HourlyReport\ReportGeneralProperties.xaml.cs">
+      <DependentUpon>ReportGeneralProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogPropertiesPanel\LogPropertiesPanel.xaml.cs">
+      <DependentUpon>LogPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureControls\ShortFixtureLabel.xaml.cs">
+      <DependentUpon>ShortFixtureLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureControls\FixturePanel.xaml.cs">
+      <DependentUpon>FixturePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureControls\FixtureSummaryPanel.xaml.cs">
+      <DependentUpon>FixtureSummaryPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogPropertiesPanel\LogPropertiesWindow.xaml.cs">
+      <DependentUpon>LogPropertiesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureSummaryReport\FixtureSummaryReportWindow.xaml.cs">
+      <DependentUpon>FixtureSummaryReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainToolBar\MainToolBar.xaml.cs">
+      <DependentUpon>MainToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PieChart\PieChartsPanel.xaml.cs">
+      <DependentUpon>PieChartsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences\Preferences.xaml.cs">
+      <DependentUpon>Preferences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectReport\ProjectReport.cs" />
+    <Compile Include="ProjectReport\ProjectReportExporter.cs" />
+    <Compile Include="QuickReportsPanel\ReportsPanel.xaml.cs">
+      <DependentUpon>ReportsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DistributionReport\DistributionReportWindow.xaml.cs">
+      <DependentUpon>DistributionReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureSummaryReport\FixtureSummaryReport.xaml.cs">
+      <DependentUpon>FixtureSummaryReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureSummaryReport\FixtureSummaryReportRow.xaml.cs">
+      <DependentUpon>FixtureSummaryReportRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HorizontalRuler\HorizontalRuler.xaml.cs">
+      <DependentUpon>HorizontalRuler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Reports.cs" />
+    <Compile Include="SelectionRuler\SelectionTick.xaml.cs">
+      <DependentUpon>SelectionTick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StatusBar\CommandHelp.xaml.cs">
+      <DependentUpon>CommandHelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StatusBar\PolygonHelp.xaml.cs">
+      <DependentUpon>PolygonHelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StatusBar\ZoomHelp.xaml.cs">
+      <DependentUpon>ZoomHelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyLogReport\VerifyLogReportDetail.xaml.cs">
+      <DependentUpon>VerifyLogReportDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyLogReport\VerifyLogReportPanel.xaml.cs">
+      <DependentUpon>VerifyLogReportPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyLogReport\VerifyLogReportWindow.xaml.cs">
+      <DependentUpon>VerifyLogReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyLogReport\VerifyReportPanel.cs" />
+    <Compile Include="VerticalRuler\VerticalRuler.xaml.cs">
+      <DependentUpon>VerticalRuler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Brushes.cs" />
+    <Compile Include="Commands\CommandEngine.cs" />
+    <Compile Include="Commands\CommandPanel.xaml.cs">
+      <DependentUpon>CommandPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventPanel\EventPanel.xaml.cs">
+      <DependentUpon>EventPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureProfilesEditor\FixtureClassSelector.xaml.cs">
+      <DependentUpon>FixtureClassSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureProfilesEditor\FixtureProfilesEditor.xaml.cs">
+      <DependentUpon>FixtureProfilesEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureControls\FixturesPanel.xaml.cs">
+      <DependentUpon>FixturesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogPropertiesPanel\LogPropertiesDetail.cs" />
+    <Compile Include="Helper\Image.cs" />
+    <Compile Include="PieChart\PieChart.xaml.cs">
+      <DependentUpon>PieChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PieChart\PieChartToolTip.xaml.cs">
+      <DependentUpon>PieChartToolTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StatusBar\TwStatusBar.xaml.cs">
+      <DependentUpon>TwStatusBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WekaExporter\WekaExporter.cs" />
+    <Compile Include="WekaExporter\ArffSelector.xaml.cs">
+      <DependentUpon>ArffSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\CloseableTabItem.cs" />
+    <Compile Include="ConfusionMatrix\ConfusionMatrix.cs" />
+    <Compile Include="CSVReader\CSVReader.cs" />
+    <Compile Include="CSVReader\StringConverter.cs" />
+    <Compile Include="EventsProperties\EventsProperties.cs" />
+    <Compile Include="Helper\File.cs" />
+    <Compile Include="EventsCanvas\LinedEventsCanvas.cs" />
+    <Compile Include="Progress\IProgressOperation.cs" />
+    <Compile Include="FixtureProfilesPanel\FixtureProfilesPanel.xaml.cs">
+      <DependentUpon>FixtureProfilesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Progress\ProgressWindow.xaml.cs">
+      <DependentUpon>ProgressWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="EventsCanvas\ScrollableCanvas.cs" />
+    <Compile Include="SpeechRecognition\SpeechEnabledEventsViewer.cs" />
+    <Compile Include="ConfusionMatrix\Trace.cs" />
+    <Compile Include="ConfusionMatrix\Traces.cs" />
+    <Compile Include="ProjectReport\ProjectReportPanel.cs" />
+    <Compile Include="ProjectReport\ProjectReportSelector.xaml.cs">
+      <DependentUpon>ProjectReportSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HourlyReport\HourlyReport.cs" />
+    <Compile Include="AggregateReport\AggregateReportPanel.cs" />
+    <Compile Include="UserNotes\UserNotes.xaml.cs">
+      <DependentUpon>UserNotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionRuler\SelectionRuler.xaml.cs">
+      <DependentUpon>SelectionRuler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeFramePanel\TimeFramePanel.xaml.cs">
+      <DependentUpon>TimeFramePanel.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tips\TwTips1.doc" />
+    <None Include="Tips\TwTips2.doc" />
+    <None Include="Tips\TwTips3.doc" />
+    <Resource Include="Images\tracerecover.png" />
+    <Resource Include="Images\classificationactionmodeall.png" />
+    <Resource Include="Images\classificationactionmodeforward.png" />
+    <Resource Include="Images\classificationactionmodeselected.png" />
+    <Resource Include="Images\function.png" />
+    <Resource Include="TraceWizard.ico" />
+    <Content Include="TwTips3.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TwTips2.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\pdf.png" />
+    <Resource Include="Images\arrowup.png" />
+    <Resource Include="Images\movedown2.png" />
+    <Resource Include="Images\movedown3.png" />
+    <Resource Include="Images\moveup3.png" />
+    <Resource Include="Images\eventflash.png" />
+    <Resource Include="Images\run.png" />
+    <Resource Include="Images\bookmarkset.png" />
+    <Resource Include="Images\bookmarkgoto.png" />
+    <Resource Include="Images\export.png" />
+    <Resource Include="Images\nextselected.png" />
+    <Resource Include="Images\previousselected.png" />
+    <Resource Include="Images\approvalruler.png" />
+    <Resource Include="Images\classificationruler.png" />
+    <Resource Include="Images\approve.png" />
+    <Resource Include="Images\addfixture.png" />
+    <Resource Include="Images\filter.png" />
+    <Resource Include="Images\applyfixture.png" />
+    <Resource Include="Images\approveallprevious.png" />
+    <Resource Include="Images\approveinview.png" />
+    <Content Include="TwTips1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\bathtub.png" />
+    <Resource Include="Images\clotheswasher.png" />
+    <Resource Include="Images\cooler.png" />
+    <Resource Include="Images\dishwasher.png" />
+    <Resource Include="Images\duplicate.png" />
+    <Resource Include="Images\faucet.png" />
+    <Resource Include="Images\hottub.png" />
+    <Resource Include="Images\humidifier.png" />
+    <Resource Include="Images\irrigation.png" />
+    <Resource Include="Images\leak.png" />
+    <Resource Include="Images\newfixture.png" />
+    <Resource Include="Images\noise.png" />
+    <Resource Include="Images\other.png" />
+    <Resource Include="Images\pool.png" />
+    <Resource Include="Images\shower.png" />
+    <Resource Include="Images\toilet.png" />
+    <Resource Include="Images\treatment.png" />
+    <Resource Include="Images\weka.png" />
+    <Resource Include="Images\settings.png" />
+    <Resource Include="Images\page.png" />
+    <Resource Include="Images\stats.png" />
+    <Resource Include="Images\open2.png" />
+    <Resource Include="Images\classify1st.png" />
+    <Resource Include="Images\usernote.png" />
+    <Resource Include="Images\mail.png" />
+    <Resource Include="Images\update.png" />
+    <Resource Include="Images\find.png" />
+    <Resource Include="Images\undo.png" />
+    <Resource Include="Images\redo.png" />
+    <Resource Include="Images\mergehorizontalprevious.png" />
+    <Resource Include="Images\mergehorizontalnext.png" />
+    <Resource Include="Images\mergeverticalallintobase.png" />
+    <Resource Include="Images\mergeverticalintobase.png" />
+    <Resource Include="Images\globe.png" />
+    <Resource Include="Images\hammer.png" />
+    <Resource Include="Images\database.png" />
+    <Resource Include="Images\confusionmatrix.png" />
+    <Resource Include="Images\clock.png" />
+    <Resource Include="Images\house.png" />
+    <Resource Include="Images\trace.png" />
+    <Resource Include="Images\tracenew.png" />
+    <Resource Include="Images\traceopen.png" />
+    <Resource Include="Images\traces2.png" />
+    <Resource Include="Images\statsdatabase.png" />
+    <Resource Include="Images\saveas.png" />
+    <Resource Include="Images\excel.png" />
+    <Resource Include="Images\statsexcel.png" />
+    <Resource Include="Images\tracedatabase.png" />
+    <Resource Include="Images\databases.png" />
+    <Resource Include="Images\book.png" />
+    <Resource Include="Images\selectall.png" />
+    <Resource Include="Images\user1st.png" />
+    <Resource Include="Images\findnext.png" />
+    <Resource Include="Images\findprevious.png" />
+    <Resource Include="Images\findmodeany.png" />
+    <Resource Include="Images\findmodeselected.png" />
+    <Resource Include="Images\findmodesimilar.png" />
+    <Resource Include="Images\findmodeother.png" />
+    <Resource Include="Images\findfirst.png" />
+    <Resource Include="Images\findlast.png" />
+    <Resource Include="Images\fixturesruler.png" />
+    <Resource Include="Images\selectionruler.png" />
+    <Resource Include="Images\arrowdown.png" />
+    <Resource Include="Images\arrowleft.png" />
+    <Resource Include="Images\arrowright.png" />
+    <Resource Include="Images\manualclassificationmodewithadoption.png" />
+    <Resource Include="Images\manualclassificationmodewithoutadoption.png" />
+    <Resource Include="Images\refresh.png" />
+    <Content Include="TraceWizardProKey.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="twCommandLineHelp.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="twCommandsHelp.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="twReadMe.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="twReleaseNotes.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="twShortcutsHelp.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\new.png" />
+    <Resource Include="Images\open.png" />
+    <Resource Include="Images\print.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\zoom.png" />
+    <Resource Include="Images\zoomin.png" />
+    <Resource Include="Images\zoomout.png" />
+    <Resource Include="Images\site.ico" />
+    <Resource Include="Images\TraceWizard.ico" />
+    <Resource Include="Images\zoominhorizontal.png" />
+    <Resource Include="Images\zoomouthorizontal.png" />
+    <Resource Include="Images\zoominvertical.png" />
+    <Resource Include="Images\zoomoutvertical.png" />
+    <Resource Include="Images\splithorizontal.png" />
+    <Resource Include="Images\splitvertical.png" />
+    <Resource Include="Images\mergehorizontal.png" />
+    <Resource Include="Images\mergevertical.png" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Disaggregators\Disaggregators.vbproj">
+      <Project>{3A8E147D-63D4-40B3-B454-8E6C767FC36D}</Project>
+      <Name>Disaggregators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Environment\Environment.csproj">
+      <Project>{839A6015-E564-42BA-B897-4FBC6A9F5B50}</Project>
+      <Name>Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{103A11A1-ED08-402D-94CC-D7431B94F4DF}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="About\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AnalysisPanel\AnalysisPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AnalysisPanel\CompareAnalysesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ApprovalRuler\ApprovalRuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ApprovalRuler\ApprovalTick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ClassificationRuler\ClassificationRuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ClassificationRuler\ClassificationTick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DateTimePicker\DateTimePickerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureControls\FixtureButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureProfilesEditor\FixtureProfileRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixturesRuler\FixturesRuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixturesRuler\FixtureTick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureSummaryReport\FixtureSummaryReportPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ConversionFactor\ConversionFactorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GraphToolBar\GraphToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HourlyReport\DailyTotalsDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainToolBar\MainToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PieChart\PieChartsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectionRuler\SelectionTick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StatusBar\CommandHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StatusBar\PolygonHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StatusBar\ZoomHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VerifyLogReport\VerifyLogReportDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VerifyLogReport\VerifyLogReportPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VerifyLogReport\VerifyLogReportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WekaExporter\ArffSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Commands\CommandPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ConfusionMatrix\SelectClassifier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DistributionReport\DistributionReportPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventPanel\EventPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventPolygon\EventPolygon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventPolygon\EventPolygonMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventProperties\EventProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventsCanvas\EventsCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventsViewer\EventsViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EventsViewer\StyledEventsViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureControls\HorizontalFixtureLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HourlyReport\HourlyReportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HourlyReport\HourlyReportPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HourlyReport\HourlyTotalsDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HourlyReport\ReportGeneralProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LogPropertiesPanel\LogPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureControls\ShortFixtureLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureControls\FixturePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureControls\FixtureSummaryPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LogPropertiesPanel\LogPropertiesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureSummaryReport\FixtureSummaryReportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Preferences\Preferences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="QuickReportsPanel\ReportsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DistributionReport\DistributionReportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureSummaryReport\FixtureSummaryReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureSummaryReport\FixtureSummaryReportRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HorizontalRuler\HorizontalRuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VerticalRuler\VerticalRuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureProfilesEditor\FixtureClassSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureProfilesEditor\FixtureProfilesEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureControls\FixturesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FixtureProfilesPanel\FixtureProfilesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PieChart\PieChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PieChart\PieChartToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StatusBar\TwStatusBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\TwDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Progress\ProgressWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProjectReport\ProjectReportSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserNotes\UserNotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectionRuler\SelectionRuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TimeFramePanel\TimeFramePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\classify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\piechart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aggregate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aquacraftLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\hide.png" />
+    <Resource Include="Images\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\criticalerror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fullscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

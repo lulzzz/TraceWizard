@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.FixtureSummaryPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+    <StackPanel>
+        <TextBlock Name="textBlockInstancesCount" HorizontalAlignment="Center" Padding="2,3"/>
+        <TextBlock Name="textBlockInstancesDelta" FontWeight="Bold" HorizontalAlignment="Center" Padding="2,3"/>
+        <TextBlock Name="textBlockSelected" HorizontalAlignment="Center" Padding="2,3"/>
+        <TextBlock Name="textBlockVolume" HorizontalAlignment="Center" Padding="2,3"/>
+        <TextBlock Name="textBlockVolumePercent" HorizontalAlignment="Center" Padding="2,3"/>
+    </StackPanel>
+</UserControl>

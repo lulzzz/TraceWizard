@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{103A11A1-ED08-402D-94CC-D7431B94F4DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TraceWizard.CoreLibrary</RootNamespace>
+    <AssemblyName>TraceWizard.CoreLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\$(AssemblyName)\$(Configuration)</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\$(AssemblyName)\$(Configuration)</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\bin\$(AssemblyName)\$(Configuration)</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\$(AssemblyName)\$(Configuration)</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adopters\NaiveAdopters.cs" />
+    <Compile Include="Adopters\NullAdopter.cs" />
+    <Compile Include="Adoption.cs" />
+    <Compile Include="AnalysisAdapters\ArffAnalysisAdapter.cs" />
+    <Compile Include="AnalysisAdapters\Tw4JetAnalysisAdapter.cs" />
+    <Compile Include="Classification.cs" />
+    <Compile Include="Classifiers\CompositeClassifier.cs" />
+    <Compile Include="Classifiers\J48Classifier.cs" />
+    <Compile Include="Classifiers\LeakClassifier.cs" />
+    <Compile Include="Classifiers\NearestNeighborClassifier.cs" />
+    <Compile Include="Classifiers\NullClassifier.cs" />
+    <Compile Include="Classifiers\OneRulePeakClassifier.cs" />
+    <Compile Include="Classifiers\RepTreeClassifier.cs" />
+    <Compile Include="Classifiers\FixtureListClassifiers.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="Converters.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="FeatureLevels.cs" />
+    <Compile Include="FixtureClass.cs" />
+    <Compile Include="FixtureProfile.cs" />
+    <Compile Include="FixtureSummary.cs" />
+    <Compile Include="Flow.cs" />
+    <Compile Include="LogAdapters\ManuFloLogAdapter.cs" />
+    <Compile Include="LogAdapters\LogMeter.cs" />
+    <Compile Include="LogAdapters\MeterMasterCsvLogAdapter.cs" />
+    <Compile Include="LogAdapters\MeterMasterJetLogAdapter.cs" />
+    <Compile Include="LogAdapters\TelematicsLogAdapter.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="Analyzers.cs" />
+    <Compile Include="Services.cs" />
+    <Compile Include="TimeFrame.cs" />
+    <Compile Include="Disaggregation.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="Analyses.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Undo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Environment\Environment.csproj">
+      <Project>{839A6015-E564-42BA-B897-4FBC6A9F5B50}</Project>
+      <Name>Environment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Classifiers\exemplars.twdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

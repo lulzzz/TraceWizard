@@ -1,0 +1,99 @@
+﻿<ContextMenu x:Class="TraceWizard.TwApp.EventPolygonMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Name="MenuContext"
+>
+    <MenuItem x:Name="MenuFirstCycle" Header="_1st Cycle" InputGestureText="1" >
+        <MenuItem.Icon>
+            <Image Source="../Images/user1st.png" />
+        </MenuItem.Icon>
+    </MenuItem>
+    <Separator />
+    <MenuItem x:Name="MenuMoreFixtures" Header="More Fixtures" />
+    <Separator x:Name="SeparatorFixtures"/>
+    <Separator />
+    <MenuItem x:Name="MenuAddFixture" Header="Add to Fixture List" InputGestureText="2" >
+        <MenuItem.Icon>
+            <Image Source="../Images/addfixture.png" />
+        </MenuItem.Icon>
+    </MenuItem>
+    <MenuItem x:Name="MenuApplyFixture" Header="Incorporate Into Fixture List" InputGestureText="3" >
+        <MenuItem.Icon>
+            <Image Source="../Images/applyfixture.png" />
+        </MenuItem.Icon>
+    </MenuItem>
+    <Separator />
+    <MenuItem x:Name="MenuFind" Header="Find" >
+        <MenuItem.Icon>
+            <Image Source="../Images/find.png" />
+        </MenuItem.Icon>
+        <MenuItem x:Name="MenuFindNext" Header="Find Next" InputGestureText="Ctrl+Right Arrow"/>
+        <MenuItem x:Name="MenuFindPrevious" Header="Find Previous" InputGestureText="Ctrl+Left Arrow"/>
+        <Separator />
+        <MenuItem x:Name="MenuFindNextAny" Header="Find Next Any" InputGestureText="Shift+Right Arrow"/>
+        <MenuItem x:Name="MenuFindPreviousAny" Header="Find Previous Any" InputGestureText="Shift+Left Arrow"/>
+        <Separator />
+        <MenuItem x:Name="MenuFindNextOther" Header="Find Next Other" >
+            <MenuItem x:Name="MenuFindNextOtherMore" Header="More Fixtures" />
+            <Separator />
+        </MenuItem>
+        <MenuItem x:Name="MenuFindPreviousOther" Header="Find Previous Other" >
+            <MenuItem x:Name="MenuFindPreviousOtherMore" Header="More Fixtures" />
+            <Separator />
+        </MenuItem>
+        <Separator />
+        <MenuItem x:Name="MenuFindNextSimilar" Header="Find Next Similar" InputGestureText="Ctrl+Shift+Right Arrow"/>
+        <MenuItem x:Name="MenuFindPreviousSimilar" Header="Find Previous Similar" InputGestureText="Ctrl+Shift+Left Arrow"/>
+        <Separator />
+        <MenuItem x:Name="MenuFindNextUserNote" Header="Find Next Note" />
+        <MenuItem x:Name="MenuFindPreviousUserNote" Header="Find Previous Note"  />
+    </MenuItem>
+    <Separator />
+    <MenuItem x:Name="MenuMerge" Header="Merge" >
+        <MenuItem x:Name="MenuMergeNextEventIntoThisEvent" Header="Next Event Into This Event"  InputGestureText="Drag" >
+            <MenuItem.Icon>
+                <Image Source="../Images/mergehorizontalnext.png" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="MenuMergePreviousEventIntoThisEvent" Header="Previous Event Into This Event"  InputGestureText="Drag" >
+            <MenuItem.Icon>
+                <Image Source="../Images/mergehorizontalprevious.png" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="MenuMergeAllPreviousAndNextEventsIntoThisEvent" InputGestureText="Ctrl+Drag"
+                  Header="All Previous and Next Events Into This Event" >
+            <MenuItem.Icon>
+                <Image Source="../Images/mergehorizontal.png" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <Separator />
+        <MenuItem x:Name="MenuMergeThisEventIntoBaseEvent" Header="This Event Into Base Event" InputGestureText="Drag" >
+            <MenuItem.Icon>
+                <Image Source="../Images/mergeverticalintobase.png" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="MenuMergeAllSuperEvents" Header="All Super Events" InputGestureText="Ctrl+Drag" >
+            <MenuItem.Icon>
+                <Image Source="../Images/mergeverticalallintobase.png" />
+            </MenuItem.Icon>
+        </MenuItem>
+    </MenuItem>
+    <MenuItem x:Name="MenuSplit" Header="Split" >
+        <MenuItem x:Name="MenuSplitIntoContiguousEvents" Header="Into Contiguous Events"  InputGestureText="Alt+Click" >
+            <MenuItem.Icon>
+                <Image Source="../Images/splithorizontal.png" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem x:Name="MenuSplitIntoSimultaneousEvents" Header="Into Simultaneous Events"  InputGestureText="Ctrl+Alt+Click" >
+            <MenuItem.Icon>
+                <Image Source="../Images/splitvertical.png" />
+            </MenuItem.Icon>
+        </MenuItem>
+    </MenuItem>
+    <Separator />
+    <MenuItem x:Name="MenuUserNotes" Header="Notes" InputGestureText="z" >
+        <MenuItem.Icon>
+        <Image Source="../Images/usernote.png" />
+        </MenuItem.Icon>
+    </MenuItem>
+</ContextMenu>

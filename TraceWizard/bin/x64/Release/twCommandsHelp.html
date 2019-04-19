@@ -1,0 +1,383 @@
+<html>
+<head>
+<title>Trace Wizard Commands Help</title>
+<style type="text/css">
+body {
+width:800px;
+font-size:12px;
+font-family:Helvetica;
+}
+th, td {
+padding:10px;
+vertical-align:top;
+}
+td {
+text-align:left;
+width:50%;
+}
+th {
+text-align:right;
+font-weight:normal;
+font-style:italic;
+}
+table {
+margin-bottom:20px;
+width:100%;
+vertical-align:top;
+}
+h1, h2 {
+text-align:center;
+}
+h2 {
+border-bottom:dotted 1px;
+padding:10px;
+margin:10px;
+}
+.center {
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+<h1>Trace Wizard Commands Help</h1>
+
+<div id="intro">
+<p class="center">You can use Trace Wizard Commands to select events that meet criteria you specify in the Command Panel. </p>
+
+<p class="center">A Trace Wizard Command has three parts: <a href="#action">Action</a> <a href="#fixtures">[Fixtures]</a> <a href="#constraints">[Constraints]</a>.
+You can see examples <a href="#examples">here</a>.</p>
+
+<h2 id="action">Action</h2>
+<p class="center">Specify the Action you want to perform.</p>
+
+<table>
+<tr>
+<th>
+select next<br />select n<br />sel next<br />sel n<br />s next<br />s n<br />next<br />n
+</th>
+<td>
+Selects Next event that meets the criteria.
+
+</td>
+</tr>
+
+<tr>
+<th>
+select previous<br />select p<br />sel previous<br />sel p<br />s previous<br />s p<br />previous<br />p
+</th>
+<td>
+Selects Previous event that meets the criteria.
+</td>
+</tr>
+
+<tr>
+<th>
+select all<br />sel all<br />s all<br />select a<br />sel a<br />s a<br />all<br />a
+</th>
+<td>
+Selects all events that meet the criteria.
+</td>
+</tr>
+
+<tr>
+<th>
+view next<br />view n<br />v next<br />v n
+</th>
+<td>
+Displays the next currently selected event that meet the criteria.
+</td>
+</tr>
+
+<tr>
+<th>
+view previous<br />view p<br />v previous<br />v p
+</th>
+<td>
+Displays the previously currently selected event that meet the criteria.
+</td>
+</tr>
+
+<tr>
+<th>
+classify [similar] as<br />c [sim] as<br />c [sim] 
+</th>
+<td>
+Classifies selected events as specified fixture (optionally classifying events that are similar to the selected events).
+</td>
+</tr>
+
+<tr>
+<th>
+time<br />t
+</th>
+<td>
+Position graph at specified time.
+</td>
+</tr>
+
+<tr>
+<th>
+refresh
+</th>
+<td>
+Refreshes similar counts (perform before executing Similar command)
+</td>
+</tr>
+
+<tr>
+<th>
+approve (unapprove)
+</th>
+<td>
+Approves (unapproves) classification of selected events
+</td>
+</tr>
+
+<tr>
+<th>
+undo (redo)
+</th>
+<td>
+Undoes previous classification.
+</td>
+</tr>
+
+<tr>
+<th>
+set bookmark<br />set b
+</th>
+<td>
+Sets bookmark at current position of graph.
+</td>
+</tr>
+
+<tr>
+<th>
+go to bookmark<br />go b
+</th>
+<td>
+Goes to bookmark previously set.
+</td>
+</tr>
+
+<tr>
+<th>
+go to start<br />start
+</th>
+<td>
+Goes to start of trace.
+</td>
+</tr>
+
+<tr>
+<th>
+go to end<br />end
+</th>
+<td>
+Goes to end of trace.
+</td>
+</tr>
+
+</table>
+
+<h2 id="fixtures">Fixtures</h2>
+<p class="center">You can optionally include or exclude Fixtures as part of the action criteria.</p>
+<p class="center">The Fixtures you list must be either all included or all excluded. You cannot include some yet exclude others (for example: leak -shower).</p>
+<p class="center">Specifying Fixtures is Optional. You can direct Trace Wizard to consider all Fixtures by not listing any Fixtures in your Command.</p>
+
+<table>
+<tr>
+<th>
+leak shower faucet humidifier<br />l s f humidifier<br />l s f m
+</th>
+<td>
+Includes only events that are Leak, Shower, Faucet, or Humidifier (while excluding all others).
+</td>
+</tr>
+
+<tr>
+<th>
+-shower -irrigation<br />-s -i
+</th>
+<td>
+Excludes events that are Shower or Irrigation (while including all others).
+</td>
+</tr>
+
+</table>
+
+<h2 id="constraints">Constraints</h2>
+<p class="center">You can optionally include multiple attribute constraints as part of the action criteria.</p>
+
+<table>
+<tr>
+<th>
+volume < 3.0<br />v < 3.0
+</th>
+<td>
+Includes only events whose volume is less than 3.0.
+</td>
+</tr>
+
+<tr>
+<th>
+peak > 2
+</th>
+<td>
+Includes only events whose peak is greater than 2.
+</td>
+</tr>
+
+<tr>
+<th>
+duration > 2:00
+</th>
+<td>
+Includes only events whose duration is greater than 2 minutes.
+</td>
+</tr>
+
+<tr>
+<th>
+volume < 3.0 peak > 2<br />vol < 3.0 pk > 2
+</th>
+<td>
+Includes events whose volume is less than 3.0 <em>and</em> whose peak is greater than 2.
+</td>
+</tr>
+
+<tr>
+<th>
+1st
+</th>
+<td>
+Includes only events designated as 1st cycle.
+</td>
+</tr>
+
+<tr>
+<th>
+-1st
+</th>
+<td>
+Excludes events designated as 1st cycle.
+</td>
+</tr>
+
+<tr>
+<th>
+similar<br />sim
+</th>
+<td>
+Includes only events that are similar to currently selected event.
+</td>
+</tr>
+
+<tr>
+<th>
+super
+</th>
+<td>
+Includes only super (simultaneous) events.
+</td>
+</tr>
+
+<tr>
+<th>
+manual
+</th>
+<td>
+Includes only manually classified events.
+</td>
+</tr>
+
+<tr>
+<th>
+list
+</th>
+<td>
+Includes only events classify using fixture list.
+</td>
+</tr>
+
+<tr>
+<th>
+machine
+</th>
+<td>
+Includes only events classify using machine learning.
+</td>
+</tr>
+
+<tr>
+<th>
+approved
+</th>
+<td>
+Includes only events whose classification is approved by user.
+</td>
+</tr>
+
+<tr>
+<th>
+toilet1
+</th>
+<td>
+Includes only events that satisfy first toilet in fixture list.
+</td>
+</tr>
+
+<tr>
+<th>
+notes
+</th>
+<td>
+Includes only events with user notes.
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<h2 id="examples">Examples of Trace Wizard Commands</h2>
+<table>
+
+<tr><th>next<br />n</th><td>Selects next event (any fixture)</td></tr>
+<tr><th>next leak<br />next l<br />n leak<br />n l</th><td>Selects next Leak</td></tr>
+<tr><th>previous irrigation<br />previous i<br />prev irrigation<br />p i</th><td>Selects previous Irrigation</td></tr>
+<tr><th>next toilet volume < 1.5<br />next toilet vol < 1.5<br />next t vol < 1.5</th><td>Selects next Toilet with volume < 1.5</td></tr>
+<tr><th>next faucet duration > 1:30<br />n f dur > 0:90<br />n f dur > 1m30s<br />n f dur > 90s</th><td>Selects next faucet with duration > 90 seconds</td></tr>
+<tr><th>next shower volume > 5 peak > 3<br />next shower pk > 3 vol > 5</th><td>Selects next Shower with volume > 5 <em>and</em> peak > 3</td></tr>
+<tr><th>next peak > 3</th><td>Selects next event with peak > 3 (any fixture)</td></tr>
+<tr><th>next similar<br />next sim</th><td>Selects next event that is similar to currently selected one</td></tr>
+<tr><th>next clotheswasher 1st<br />n cw 1st</th><td>Selects next Clothes Washer that is designated as 1st Cycle</td></tr>
+<tr><th>next super</th><td>Selects next super (simultaneous) event</td></tr>
+<tr><th>next manual</th><td>Selects next manually classified event</td></tr>
+<tr><th>next list</th><td>Selects next event classified using fixture list</td></tr>
+<tr><th>next machine</th><td>Selects next event classified using machine learning</td></tr>
+<tr><th>next approved</th><td>Selects next event approved by user</td></tr>
+<tr><th>next toilet1</th><td>Selects next event that satisfies first toilet in fixture list</td></tr>
+<tr><th>next notes</th><td>Selects next event that has user notes</td></tr>
+<tr><th>all toilet<br />all toilets<br />a t</th><td>Selects all Toilets</td></tr>
+<tr><th>all t vol < 1.5</th><td>Selects all Toilets with volume < 1.5</td></tr>
+<tr><th>all toilet similar > 3</th><td>Selects all toilets that have three or more similar events</td></tr>
+<tr><th>view next toilet</th><td>Displays next currently selected Toilet</td></tr>
+<tr><th>v next t vol < 1.5</th><td>Displays next currently selected Toilet with volume < 1.5</td></tr>
+<tr><th>classify as irrigation<br />c as i<br />c i</th><td>Classifies selected events as Irrigation</td></tr>
+<tr><th>classify&nbsp;similar&nbsp;as&nbsp;irrigation<br />c sim as i<br />cs i</th><td>Classifies selected events (and events that are similar to the selected events) as Irrigation</td></tr>
+<tr><th>time&nbsp;August&nbsp;30,&nbsp;2009&nbsp;15:00:00<br />time&nbsp;August&nbsp;30&nbsp;09&nbsp;3:00&nbsp;pm<br />time aug 30 09 3pm<br />t 08 30 09 3pm<br />t 3pm 08 30 09</th><td>Position graph at 3pm on August 31, 2009 (formatting follows user's regional settings)</td></tr>
+<tr><th>time 8 3 09<br />t 8 3 9</th><td>Position graph at midnight on August 31, 2009 (formatting follows user's regional settings)</td></tr>
+<tr><th>refresh</th><td>Refreshes similar counts</td></tr>
+<tr><th>approve</th><td>Approves classification of selected events</td></tr>
+<tr><th>undo</th><td>Undoes previous classification</td></tr>
+<tr><th>redo</th><td>Redoes previous undo</td></tr>
+<tr><th>go to bookmark<br />go b<br />gb</th><td>Goes to bookmark</td></tr>
+<tr><th>go to start<br />go s<br />start</th><td>Goes to start of trace</td></tr>
+<tr><th>go to end<br />go e<br />end</th><td>Goes to end of trace</td></tr>
+
+</table>
+
+</body>
+</html>

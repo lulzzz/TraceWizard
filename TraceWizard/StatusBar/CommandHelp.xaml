@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="TraceWizard.TwApp.CommandHelp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+    <StackPanel Orientation="Horizontal" >
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Format:" />
+                <Run Text="Action [Fixtures] [Constraints]" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Actions:" />
+                <Run Text="select next|previous|all, view" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Fixtures:" />
+                <Run Text="[-]fixturename " FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Constraints:" />
+                <Run Text="volume, peak, mode, duration, similar, selected, 1stcycle, manual" FontStyle="Italic"/>
+        </TextBlock >
+        <TextBlock Text =" | " Style="{StaticResource StatusBarTextBlockSeparatorStyle}"/>
+        <TextBlock Style="{StaticResource StatusBarTextBlockStyle}">
+                <Run Text="Ex:" />
+                <Run Text="sel next shower cw vol &gt; 5 peak &gt; 3.5" FontStyle="Italic"/>
+        </TextBlock >
+    </StackPanel>
+</UserControl>

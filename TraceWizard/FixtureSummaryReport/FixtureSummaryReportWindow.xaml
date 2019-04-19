@@ -1,0 +1,11 @@
+﻿<Window x:Class="TraceWizard.TwApp.FixtureSummaryReportWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TraceWizard.TwApp"        
+    ShowInTaskbar = "False"
+    SizeToContent = "WidthAndHeight"
+    WindowStartupLocation = "CenterOwner"
+    WindowStyle = "ToolWindow"
+>
+    <local:FixtureSummaryReportPanel x:Name="FixtureSummaryReportPanel" VerticalAlignment="Center" Margin="20"/>
+</Window>
