@@ -7,7 +7,7 @@ using System.Windows.Controls; // has DataGrid
 using System.Windows.Media;
 using System.Data;
 
-using Microsoft.Windows.Controls; // has DataGrid
+// using Microsoft.Windows.Controls; // has DataGrid
 
 using TraceWizard.Entities;
 using TraceWizard.Services;

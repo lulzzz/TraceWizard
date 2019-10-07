@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Data;
 
-using Microsoft.Windows.Controls;
+// using Microsoft.Windows.Controls;
 
 using TraceWizard.Entities;
 using TraceWizard.Logging;
