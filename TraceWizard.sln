@@ -165,6 +165,10 @@ Global
 		DefaultBuild|Default = DefaultBuild|Default
 		DefaultBuild|Mixed Platforms = DefaultBuild|Mixed Platforms
 		DefaultBuild|x86 = DefaultBuild|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -175,14 +179,38 @@ Global
 		Debug|Default = Debug|Default
 		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x86 = Debug|x86
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
+		DefaultBuild|Default = DefaultBuild|Default
+		DefaultBuild|Mixed Platforms = DefaultBuild|Mixed Platforms
+		DefaultBuild|x86 = DefaultBuild|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
 		All|Default = All|Default
 		All|Mixed Platforms = All|Mixed Platforms
+		All|x86 = All|x86
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Default = Debug|Default
 		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
+		DefaultBuild|Default = DefaultBuild|Default
+		DefaultBuild|Mixed Platforms = DefaultBuild|Mixed Platforms
+		DefaultBuild|x86 = DefaultBuild|x86
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
+		All|Default = All|Default
+		All|Mixed Platforms = All|Mixed Platforms
+		All|x86 = All|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -211,15 +239,5 @@ Global
 		Release|Default = Release|Default
 		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Debug|Default = Debug|Default
-		Debug|Mixed Platforms = Debug|Mixed Platforms
-		Debug|x86 = Debug|x86
-		DefaultBuild|Any CPU = DefaultBuild|Any CPU
-		DefaultBuild|Default = DefaultBuild|Default
-		DefaultBuild|Mixed Platforms = DefaultBuild|Mixed Platforms
-		DefaultBuild|x86 = DefaultBuild|x86
 	EndGlobalSection
 EndGlobal
