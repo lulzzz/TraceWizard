@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TraceWizard",
+    "\\TraceWizard\\Properties"
   ],
-  "SelectedNode": "\\TraceWizard.sln",
+  "SelectedNode": "\\TraceWizard\\Properties\\AssemblyInfo.cs",
   "PreviewInSolutionExplorer": false
 }
