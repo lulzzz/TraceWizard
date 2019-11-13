@@ -1,0 +1,9 @@
+Read Me 20191108
+Mark Alexander and I have been working to get co-ordinated on the use of Visual Studio 2019 and Git to manage and update the Trace Wizard.
+The official repository for the project is kept on the GitHub.com site. The URL for the repo is:
+https://github.com/AquamanBill/TraceWizard
+Both Mark and I have local clones of the repository and we are currently just getting familiar with the use of Git and Visual Studio.
+One issue is whether we should use Visual Studio strictly to edit the software and rely on Git to update the repository, or if we can use the built in Git functionality in Visual Study to do the adds, comitts and pushes necessary to keep things up to date.
+I have been re-reading a book on Git that I got on Amazon called "Git For Humans" by David Demaree, which I find to be a good reference.
+As of today we have two branches on the repo: Master and WorkingVersion.  We should be working only on the WorkingVersion branch.
+I will push this file up as Bill's Notes.
